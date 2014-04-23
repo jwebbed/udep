@@ -31,7 +31,7 @@ int main(int argc, char * argv[])
     }
     
     check_c(program);
-	if (OS == WINDOWS) getchar();
+    if (OS == WINDOWS) getchar();
 
     return 0;
 }
