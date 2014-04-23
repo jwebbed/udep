@@ -4,7 +4,6 @@
 
 #include "sets.h"
 
-
 struct set* initSet(){
     struct set* set = malloc(sizeof(struct set));
     set->head = NULL;
