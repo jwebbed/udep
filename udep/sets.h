@@ -2,6 +2,7 @@ struct set_node{
     struct set_node* next;
     struct set_node* prev;
     char* data;
+    char* meta;
 };
 
 struct set{
@@ -10,6 +11,7 @@ struct set{
 };
 
 struct set* initSet();
-void append(char* data, struct set* set);
+void appendString(char* data, struct set* set);
 void freeSet(struct set* set);
 void printSet(struct set* set);
+int nodeInSet(struct set_node* node, struct set* set);

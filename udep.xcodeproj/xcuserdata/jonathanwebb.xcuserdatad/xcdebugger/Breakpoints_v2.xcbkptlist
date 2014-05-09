@@ -6,20 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -39,12 +25,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419887032.514391"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "findIncludes()"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,12 +41,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419887361.267441"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,12 +57,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -87,12 +73,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -103,12 +89,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,12 +105,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,12 +121,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419887361.267441"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -151,12 +137,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -167,12 +153,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -199,28 +185,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/sets.c"
-            timestampString = "419889946.140074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "append()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419889347.809074"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "findFunctionCalls()"
             landmarkType = "7">
          </BreakpointContent>
@@ -231,13 +201,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/sets.c"
-            timestampString = "419889946.140074"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "append()"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "isKeyword()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -247,12 +217,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "udep/c_checker.c"
-            timestampString = "419887361.267441"
+            filePath = "udep/c_find_declarations.c"
+            timestampString = "421364029.703275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "isKeyword()"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,12 +234,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "udep/c_checker.c"
-            timestampString = "419887361.267441"
+            timestampString = "421365982.917614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "isKeyword()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "check_c()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
