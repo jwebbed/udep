@@ -24,13 +24,15 @@ int main(int argc, char * argv[])
     fseek(fp, 0L, SEEK_SET);
     
     char* program = calloc(sz + 1, sizeof(char));
-    
-    if (fread(program, sizeof(char), sz, fp) != sz){
+	fread(program, sizeof(char), sz, fp);
+    if (ferror(fp)){
         perror("fread");
         exit(1);
     }
     
     check_c(program);
+    if (OS == WINDOWS) getchar();
+
     return 0;
 }
 
