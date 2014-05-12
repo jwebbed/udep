@@ -1,0 +1,1 @@
+size_t syswrite(int fildes, const void *buf, size_t nbytes);
