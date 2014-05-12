@@ -55,7 +55,7 @@
 		B92EB3C918DE81CC00BB6911 = {
 			isa = PBXGroup;
 			children = (
-				B92EB3D418DE81CC00BB6911 /* udep */,
+				B92EB3D418DE81CC00BB6911 /* source */,
 				B92EB3D318DE81CC00BB6911 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +68,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B92EB3D418DE81CC00BB6911 /* udep */ = {
+		B92EB3D418DE81CC00BB6911 /* source */ = {
 			isa = PBXGroup;
 			children = (
 				B9AF83D91902D50100C80BA7 /* Sets */,
@@ -77,14 +77,15 @@
 				B92EB3DF18DE822100BB6911 /* udep.h */,
 				B92EB3D718DE81CC00BB6911 /* udep.1 */,
 			);
-			path = udep;
-			sourceTree = "<group>";
+			name = source;
+			path = /Users/jonathanwebb/Projects/udep/source;
+			sourceTree = "<absolute>";
 		};
 		B92EB3DE18DE81DB00BB6911 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				B92EB3E018DE826400BB6911 /* c_find_declarations.c */,
 				B9AF83D519005BA200C80BA7 /* c_checker.h */,
+				B92EB3E018DE826400BB6911 /* c_find_declarations.c */,
 				B9478463191D888000CC5610 /* c_checker.c */,
 				B9478465191D89DD00CC5610 /* c_header_declarations.c */,
 			);
