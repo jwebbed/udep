@@ -13,4 +13,12 @@ void check_c(char* prog){
     freeSet(struct_set);
     freeSet(enum_set);
     freeSet(include_set);
+    
+    char *header;
+    if (getHeader(&header, "stdio.h")){
+        struct set* fset = findFunctionCalls(header);
+        printf("%s\n", header);
+        printSet(fset);
+        freeSet(fset);
+    }
 }

@@ -20,7 +20,6 @@ struct set_node* initNode(){
     return node;
 }
 
-
 int append(struct set_node* node, struct set* set){
     if (set->head == NULL){
         set->head = node;
