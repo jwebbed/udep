@@ -1,4 +1,5 @@
 #include "c_checker.h"
+#include "csearch.h"
 #include "sets.h"
 
 void check_c(char* prog){
@@ -25,3 +26,10 @@ void check_c(char* prog){
     
 }
 
+c_set mergeCSet(c_set set1, c_set set2){
+    c_set set;
+    set.function_set = mergeSets(set1.function_set, set2.function_set);
+    set.struct_set = mergeSets(set1.struct_set, set2.struct_set);
+    set.enum_set = mergeSets(set1.enum_set, set2.enum_set);
+    return set;
+}
