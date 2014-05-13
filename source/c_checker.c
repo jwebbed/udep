@@ -7,18 +7,20 @@ void check_c(char* prog){
     struct set* enum_set = findEnums(prog);
     struct set* include_set = findIncludes(prog);
     
-    printSet(include_set);
+    //printSet(function_set);
     
     freeSet(function_set);
     freeSet(struct_set);
     freeSet(enum_set);
     freeSet(include_set);
     
+    
     char *header;
-    if (getHeader(&header, "stdio.h")){
-        struct set* fset = findFunctionCalls(header);
-        printf("%s\n", header);
+    if (getHeader(&header, "string.h")){
+        struct set* fset = findFunctionDeclarations(header);
+        //printf("%s\n", header);
         printSet(fset);
         freeSet(fset);
     }
+    
 }

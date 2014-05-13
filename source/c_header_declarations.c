@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include <errno.h>
 
-#define printstr(x) printf("%s\n", (x))
-#define error() printf("%d\n", errno)
+#include "sets.h"
+#include "c_checker.h"
 
 // checks if a header file exists in the input dir,
 // returns 1 if sucessful 0 if not
@@ -16,8 +16,10 @@ int checkHeader(const char* dir, char* header){
     return (access(full, F_OK) == 0);
 }
 
-// searches for a header file
-// returns 1 if sucessful 0 if not
+/* 
+ * searches for a header file
+ * returns 1 if sucessful 0 if not
+ */
 int searchHeader(char* header, FILE** fp){
     if (checkHeader("/usr/local/include/", header)){
         char full[strlen("/usr/local/include/") + strlen(header)];
@@ -69,3 +71,5 @@ int getHeader(char** file, char* header){
         return 0;
     }
 }
+
+

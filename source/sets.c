@@ -100,3 +100,18 @@ struct set* setUnion(struct set* set1, struct set* set2){
             append(nodecpy(n), un);
     return un;
 }
+
+struct set* mergeSets(struct set* set1, struct set* set2){
+    struct set* set = initSet();
+    for (struct set_node* n = set1->head; n != NULL; n = n->next){
+        if (!nodeInSet(n, set))
+            append(nodecpy(n), set);
+    }
+    for (struct set_node* n = set2->head; n != NULL; n = n->next){
+        if (!nodeInSet(n, set))
+            append(nodecpy(n), set);
+    }
+    freeSet(set1);
+    freeSet(set2);
+    return set;
+}

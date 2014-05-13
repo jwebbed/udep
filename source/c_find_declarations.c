@@ -8,7 +8,6 @@
 
 #define BUF_SIZE 100
 
-
 enum include {
     pound,
     i,
@@ -103,10 +102,6 @@ bool isUpperCase(char c){
     return false;
 }
 
-bool isAlphabetic(char c){
-    return isLowerCase(c) || isUpperCase(c);
-}
-
 bool isAlphanumeric(char c){
     if (isLowerCase(c) || isUpperCase(c))
         return 1;
@@ -118,13 +113,9 @@ bool isAlphanumeric(char c){
     return false;
 }
 
-bool validInitialIndentifierChar(char c){
-    return isAlphabetic(c) || c == '_';
-}
-
-bool validIndentifierChar(char c){
-    return isAlphanumeric(c) || c == '_';
-}
+#define isAlphabetic(c) (isLowerCase(c) || isUpperCase(c))
+#define validInitialIndentifierChar(c) (isAlphabetic((c)) || (c) == '_')
+#define validIndentifierChar(c) (isAlphanumeric(c) || (c) == '_')
 
 void stripWhiteSpace(char* buf){
     for (int i = (int)strlen(buf); i >= 0; i--){
@@ -148,7 +139,7 @@ enum comment {
     line
 };
 
-const char* keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
+char* keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
 
 bool isKeyword(char* buf){
     char* word;
@@ -160,7 +151,7 @@ bool isKeyword(char* buf){
     return false;
 }
 
-struct set* findFunctionCalls(char * prog){
+struct set* _findFunctionCalls(char * prog, int header){
     struct set* set = initSet();
     char buf[BUF_SIZE];
     
@@ -201,7 +192,7 @@ struct set* findFunctionCalls(char * prog){
         // Looks for functions
         if (state == init){
         init:
-            if (isAlphabetic(ch)){
+            if (validInitialIndentifierChar(ch)){
                 state = name;
                 start = k;
             }
@@ -210,7 +201,7 @@ struct set* findFunctionCalls(char * prog){
                 state = space_after_name;
             } else if (ch == '('){
                 state = left_bracket;
-            } else if (!isAlphanumeric(ch)){
+            } else if (!validIndentifierChar(ch)){
                 state = init;
             }
         } else if (state == space_after_name){
@@ -221,7 +212,7 @@ struct set* findFunctionCalls(char * prog){
                 start = k;
             }
         } else if (state == left_bracket){
-            if (depth){
+            if (header || depth){
                 strncpy(buf, prog + start, k - start - 1);
                 buf[k - start - 1] = '\0';
                 stripWhiteSpace(buf);
@@ -233,6 +224,7 @@ struct set* findFunctionCalls(char * prog){
     }
     return set;
 }
+
 
 enum enum_struct {
     initial,
