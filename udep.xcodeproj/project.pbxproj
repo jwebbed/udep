@@ -17,7 +17,7 @@
 		B945F3D11922D25D002A492F /* csearch_define.c in Sources */ = {isa = PBXBuildFile; fileRef = B945F3D01922D25D002A492F /* csearch_define.c */; };
 		B9478464191D888000CC5610 /* c_checker.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478463191D888000CC5610 /* c_checker.c */; };
 		B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478465191D89DD00CC5610 /* c_header_declarations.c */; };
-		B9AF83DB1902D51100C80BA7 /* sets.c in Sources */ = {isa = PBXBuildFile; fileRef = B9AF83DA1902D51100C80BA7 /* sets.c */; };
+		B9946FD91922D7F00024A52B /* sets.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FD71922D7F00024A52B /* sets.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,9 +47,9 @@
 		B945F3D01922D25D002A492F /* csearch_define.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_define.c; sourceTree = "<group>"; };
 		B9478463191D888000CC5610 /* c_checker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = c_checker.c; sourceTree = "<group>"; };
 		B9478465191D89DD00CC5610 /* c_header_declarations.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = c_header_declarations.c; sourceTree = "<group>"; };
+		B9946FD71922D7F00024A52B /* sets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sets.c; sourceTree = "<group>"; };
+		B9946FD81922D7F00024A52B /* sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sets.h; sourceTree = "<group>"; };
 		B9AF83D519005BA200C80BA7 /* c_checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
-		B9AF83DA1902D51100C80BA7 /* sets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sets.c; sourceTree = "<group>"; };
-		B9AF83DC1902D51F00C80BA7 /* sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sets.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 		B92EB3D418DE81CC00BB6911 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				B9AF83D91902D50100C80BA7 /* Sets */,
+				B945F3D21922D783002A492F /* sets */,
 				B92EB3DE18DE81DB00BB6911 /* C */,
 				B92EB3D518DE81CC00BB6911 /* udep.c */,
 				B92EB3DF18DE822100BB6911 /* udep.h */,
@@ -117,13 +117,13 @@
 			name = "C Searchers";
 			sourceTree = "<group>";
 		};
-		B9AF83D91902D50100C80BA7 /* Sets */ = {
+		B945F3D21922D783002A492F /* sets */ = {
 			isa = PBXGroup;
 			children = (
-				B9AF83DA1902D51100C80BA7 /* sets.c */,
-				B9AF83DC1902D51F00C80BA7 /* sets.h */,
+				B9946FD71922D7F00024A52B /* sets.c */,
+				B9946FD81922D7F00024A52B /* sets.h */,
 			);
-			name = Sets;
+			path = sets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,12 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9946FD91922D7F00024A52B /* sets.c in Sources */,
 				B945F3CB1922CE6E002A492F /* csearch_func.c in Sources */,
 				B92EB3D618DE81CC00BB6911 /* udep.c in Sources */,
 				B945F3D11922D25D002A492F /* csearch_define.c in Sources */,
 				B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */,
 				B945F3CF1922CFF7002A492F /* csearch_struct.c in Sources */,
-				B9AF83DB1902D51100C80BA7 /* sets.c in Sources */,
 				B945F3CD1922CF3F002A492F /* csearch_enum.c in Sources */,
 				B9478464191D888000CC5610 /* c_checker.c in Sources */,
 				B945F3C91922CCED002A492F /* csearch_include.c in Sources */,

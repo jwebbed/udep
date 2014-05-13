@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <errno.h>
 
-#include "sets.h"
+#include "sets/sets.h"
 #include "c_checker.h"
 
 // checks if a header file exists in the input dir,

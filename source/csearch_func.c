@@ -1,6 +1,6 @@
 #include <string.h>
 
-#include "sets.h"
+#include "sets/sets.h"
 #include "csearch.h"
 
 enum func {

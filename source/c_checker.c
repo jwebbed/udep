@@ -1,6 +1,6 @@
 #include "c_checker.h"
 #include "csearch.h"
-#include "sets.h"
+#include "sets/sets.h"
 
 void check_c(char* prog){
     struct set* function_set = findFunctionCalls(prog);

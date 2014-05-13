@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "sets.h"
+#include "sets/sets.h"
 #include "csearch.h"
 
 enum _enum {
