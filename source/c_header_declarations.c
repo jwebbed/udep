@@ -72,13 +72,13 @@ int getHeader(char** file, char* header){
     }
 }
 
-c_set getDeclarations(char* header){
-    c_set set = initCSet();
+c_set *getDeclarations(char* header){
+    c_set *set = initCSet();
     char* prog;
     if (getHeader(&prog, header)){
-        set.function_set = findFunctionDeclarations(prog);
-        set.struct_set = findStructs(prog);
-        set.enum_set = findEnums(prog);
+        set->function_set = findFunctionDeclarations(prog);
+        set->struct_set = findStructs(prog);
+        set->enum_set = findEnums(prog);
         
         struct set* include_set = findIncludes(prog);
         include inc;

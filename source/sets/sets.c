@@ -115,12 +115,12 @@ struct set* setcpy(struct set* set1){
     }
     return set;
 }
+
 struct set* mergeSets(struct set* set1, struct set* set2){
     struct set* set = setcpy(set1);
     for (struct set_node* n = set2->head; n != NULL; n = n->next){
         append(nodecpy(n), set);
     }
-
     return set;
 }
 
@@ -130,3 +130,13 @@ int setLen(struct set* set){
         len++;
     return len;
 }
+
+struct set_node* linSearch(struct set* set, char * data){
+    for (struct set_node* n = set->head; n != NULL; n = n->next)
+        if (strcmp(n->data, data) == 0)
+            return n;
+    return NULL;
+}
+
+
+

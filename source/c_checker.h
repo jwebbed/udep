@@ -7,10 +7,10 @@ typedef struct {
     struct set* enum_set;
 } c_set;
 
-c_set getDeclarations(char* header);
-c_set mergeCSet(c_set set1, c_set set2);
-c_set initCSet();
+c_set *getDeclarations(char* header);
+c_set *mergeCSet(c_set *set1, c_set *set2);
+c_set *initCSet();
 
 typedef struct set c_map;
 void appendCSet(c_map *map, c_set *set);
-void checkForCSet(c_map *map, char* name);
+c_set * checkForCSet(c_map *map, char* name);

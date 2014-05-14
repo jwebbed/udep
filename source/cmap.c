@@ -8,5 +8,6 @@ void appendCSet(c_map *map, c_set *set){
 }
 
 c_set* checkForCSet(c_map *map, char* name){
-    
+    struct set_node* n = linSearch(map, name);
+    return n->meta;
 }
