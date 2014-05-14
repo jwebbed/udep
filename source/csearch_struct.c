@@ -76,7 +76,7 @@ struct set* findStructs(char* prog){
             appendString(buf, set);
             state = initial;
         }
-        
     }
+    
     return set;
 }

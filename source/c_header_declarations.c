@@ -6,6 +6,7 @@
 
 #include "sets/sets.h"
 #include "c_checker.h"
+#include "csearch.h"
 
 // checks if a header file exists in the input dir,
 // returns 1 if sucessful 0 if not
@@ -70,6 +71,27 @@ int getHeader(char** file, char* header){
     } else {
         return 0;
     }
+}
+
+c_set getDeclarations(char* header){
+    c_set set = initCSet();
+    char* prog;
+    if (getHeader(&prog, header)){
+        set.function_set = findFunctionDeclarations(prog);
+        set.struct_set = findStructs(prog);
+        set.enum_set = findEnums(prog);
+        
+        struct set* include_set = findIncludes(prog);
+        include inc;
+        if (setLen(include_set) > 0){
+            for (struct set_node* n = include_set->head; n != NULL; n = n->next) {
+                inc = includeInit(n->data);
+                if (inc.type == global)
+                    set = mergeCSet(set, getDeclarations(inc.name));
+            }
+        }
+    }
+    return set;
 }
 
 

@@ -71,6 +71,8 @@ void printSet(struct set* set){
 
 struct set_node* nodecpy(struct set_node* node){
     struct set_node* node_copy = initNode();
+    if (node == NULL)
+        return NULL;
     if (node->data != NULL){
         node_copy->data = malloc(strlen(node->data));
         strcpy(node_copy->data, node->data);
@@ -101,17 +103,25 @@ struct set* setUnion(struct set* set1, struct set* set2){
     return un;
 }
 
-struct set* mergeSets(struct set* set1, struct set* set2){
+struct set* setcpy(struct set* set1){
     struct set* set = initSet();
     for (struct set_node* n = set1->head; n != NULL; n = n->next){
-        if (!nodeInSet(n, set))
-            append(nodecpy(n), set);
+        append(nodecpy(n), set);
     }
-    for (struct set_node* n = set2->head; n != NULL; n = n->next){
-        if (!nodeInSet(n, set))
-            append(nodecpy(n), set);
-    }
-    freeSet(set1);
-    freeSet(set2);
     return set;
+}
+struct set* mergeSets(struct set* set1, struct set* set2){
+    struct set* set = setcpy(set1);
+    for (struct set_node* n = set2->head; n != NULL; n = n->next){
+        append(nodecpy(n), set);
+    }
+
+    return set;
+}
+
+int setLen(struct set* set){
+    int len = 0;
+    for (struct set_node* n = set->head; n != NULL; n = n->next)
+        len++;
+    return len;
 }

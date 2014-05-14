@@ -10,6 +10,18 @@ struct set* findEnums(char* prog);
 struct set* findStructs(char* prog);
 struct set* findDefines(char * prog);
 
+typedef enum {
+    local,
+    global
+} include_type;
+
+typedef struct {
+    char* name;
+    include_type type;
+} include;
+
+include includeInit(char* name);
+
 // Internal
 
 #define isAlphabetic(c) (isLowerCase(c) || isUpperCase(c))

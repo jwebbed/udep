@@ -83,3 +83,15 @@ struct set* findIncludes(char * prog){
     }
     return set;
 }
+
+
+include includeInit(char* name){
+    include inc;
+    if (name[0] == '<')
+        inc.type = global;
+    else if (name[0] == '"')
+        inc.type = local;
+    inc.name = calloc(strlen(name) - 1, 0);
+    strncpy(inc.name, name + 1, strlen(name) - 2);
+    return inc;
+}
