@@ -41,11 +41,16 @@ int append(struct set_node* node, struct set* set){
     return 0;
 }
 
-void appendString(char* data, struct set* set){
+struct set_node* appendString(char* data, struct set* set){
     struct set_node* node = initNode();
     node->data = malloc(strlen(data));
     strcpy(node->data, data);
-    if(!append(node, set)) free(node);
+    if(!append(node, set)) {
+        free(node);
+        return NULL;
+    } else {
+        return node;
+    }
 }
 
 void _freeSet(struct set_node* node){

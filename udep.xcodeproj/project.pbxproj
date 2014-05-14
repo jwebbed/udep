@@ -18,6 +18,7 @@
 		B9478464191D888000CC5610 /* c_checker.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478463191D888000CC5610 /* c_checker.c */; };
 		B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478465191D89DD00CC5610 /* c_header_declarations.c */; };
 		B9946FD91922D7F00024A52B /* sets.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FD71922D7F00024A52B /* sets.c */; };
+		B9946FDD1923BB970024A52B /* cmap.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FDC1923BB970024A52B /* cmap.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		B9478465191D89DD00CC5610 /* c_header_declarations.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = c_header_declarations.c; sourceTree = "<group>"; };
 		B9946FD71922D7F00024A52B /* sets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sets.c; sourceTree = "<group>"; };
 		B9946FD81922D7F00024A52B /* sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sets.h; sourceTree = "<group>"; };
+		B9946FDC1923BB970024A52B /* cmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmap.c; sourceTree = "<group>"; };
 		B9AF83D519005BA200C80BA7 /* c_checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B945F3C61922CB28002A492F /* C Searchers */,
+				B9946FDC1923BB970024A52B /* cmap.c */,
 				B9AF83D519005BA200C80BA7 /* c_checker.h */,
 				B9478463191D888000CC5610 /* c_checker.c */,
 				B9478465191D89DD00CC5610 /* c_header_declarations.c */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9946FDD1923BB970024A52B /* cmap.c in Sources */,
 				B9946FD91922D7F00024A52B /* sets.c in Sources */,
 				B945F3CB1922CE6E002A492F /* csearch_func.c in Sources */,
 				B92EB3D618DE81CC00BB6911 /* udep.c in Sources */,
