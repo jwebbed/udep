@@ -7,7 +7,8 @@
 enum _struct {
     initial,
     _space,
-    enum_struct
+    enum_struct,
+    _typedef
 };
 
 
@@ -57,9 +58,12 @@ struct set* findStructs(char* prog){
                 state = _space;
             }
         } else if (state == _space){
-            if (ch == ' ')
+            if (ch == '{'){
+                state = _typedef;
+                continue;
+            } else if (ch == ' ' || ch == '\t') {
                 whitespace++;
-            else if (validIndentifierChar(ch)){
+            } else if (validIndentifierChar(ch)){
                 if (whitespace == 0)
                     state = initial;
                 else if (validInitialIndentifierChar(ch)){
@@ -70,6 +74,13 @@ struct set* findStructs(char* prog){
                 }
             } else
                 exit(1);
+        } else if (state == _typedef) {
+            if (ch == '}'){
+                whitespace = 1;
+                state = _space;
+            } else {
+                continue;
+            }
         } else if (state == enum_struct && !validIndentifierChar(ch)){
             strncpy(buf, prog + start, k - start);
             buf[k - start] = '\0';

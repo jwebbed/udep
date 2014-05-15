@@ -72,21 +72,37 @@ int getHeader(char** file, char* header){
     }
 }
 
+c_map* header_map = NULL;
+
 c_set *getDeclarations(char* header){
-    c_set *set = initCSet();
+    if (header_map == NULL)
+        header_map = initCMap();
+    
+    c_set* set = initCSet();
+    c_set* found_set;
+    include inc;
     char* prog;
+    
     if (getHeader(&prog, header)){
+        setname(set, header);
         set->function_set = findFunctionDeclarations(prog);
         set->struct_set = findStructs(prog);
         set->enum_set = findEnums(prog);
         
         struct set* include_set = findIncludes(prog);
-        include inc;
+        set->include_set = include_set;
+        appendCSet(header_map, csetcpy(set));
+        
         if (setLen(include_set) > 0){
             for (struct set_node* n = include_set->head; n != NULL; n = n->next) {
                 inc = includeInit(n->data);
-                if (inc.type == global)
-                    set = mergeCSet(set, getDeclarations(inc.name));
+                if (inc.type == global){
+                    if ((found_set = checkForCSet(header_map, inc.name)) != NULL){
+                        set = mergeCSet(set, found_set);
+                    } else {
+                        set = mergeCSet(set, getDeclarations(inc.name));
+                    }
+                }
             }
         }
     }
