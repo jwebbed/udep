@@ -10,6 +10,7 @@ void check_c(char* prog){
     struct set* struct_set = findStructs(prog);
     struct set* enum_set = findEnums(prog);
     struct set* include_set = findIncludes(prog);
+    getDeclarations("stdbool.h");
     
     struct set_node* n;
     include inc;
@@ -20,15 +21,13 @@ void check_c(char* prog){
             getDeclarations(inc.name);
     }
     
-    
-    
     for (n = header_map->head; n != NULL; n = n->next){
         printf("%s\n", n->data);
         printf("---------\n");
-        printSet(((c_set*)n->meta)->function_set);
+        printSet(((c_set*)n->meta)->enum_set);
         printf("\n");
     }
-    
+
     freeSet(function_set);
     freeSet(struct_set);
     freeSet(enum_set);

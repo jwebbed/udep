@@ -6,9 +6,10 @@ struct set* _findFunctionCalls(char * prog, int header);
 #define findFunctionDeclarations(prog) _findFunctionCalls((prog), 1)
 
 struct set* findIncludes(char * prog);
-struct set* findEnums(char* prog);
-struct set* findStructs(char* prog);
 struct set* findDefines(char * prog);
+struct set* findEnumStructs(char* prog, const char* es);
+#define findStructs(prog) findEnumStructs((prog), "struct")
+#define findEnums(prog) findEnumStructs((prog), "enum")
 
 typedef enum {
     local,

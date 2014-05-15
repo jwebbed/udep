@@ -11,10 +11,11 @@ enum _struct {
     _typedef
 };
 
-
-struct set* findStructs(char* prog){
+struct set* findEnumStructs(char* prog, const char* es){
     struct set* set = initSet();
     char buf[BUF_SIZE];
+    
+    size_t s_len = strlen(es);
     
     enum _struct state = initial;
     enum comment comment = none;
@@ -51,12 +52,9 @@ struct set* findStructs(char* prog){
             continue;
         }
         
-        if (state == initial && ch == 's'){
-            if (prog[k+1] == 't' && prog[k+2] == 'r' && prog[k+3] == 'u' &&
-                prog[k+4] == 'c' && prog[k+5] == 't' && (k+5) < len){
-                k+=5;
-                state = _space;
-            }
+        if (state == initial && (strncmp(prog + k, es, s_len) == 0)){
+            k+= s_len - 1;
+            state = _space;
         } else if (state == _space){
             if (ch == '{'){
                 state = _typedef;
