@@ -10,7 +10,7 @@ void appendCSet(c_map *map, c_set *set){
     }
 }
 
-c_set* checkForCSet(c_map *map, char* name){
+c_set* getCSet(c_map *map, char* name){
     struct set_node* n = linSearch(map, name);
     if (n != NULL)
         return n->meta;
@@ -23,3 +23,4 @@ void freeCMap(c_map* map){
         freeCSet((c_set*)n->meta);
     freeSet(map);
 }
+

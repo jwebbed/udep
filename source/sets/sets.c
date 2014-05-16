@@ -118,16 +118,14 @@ struct set* setcpy(struct set* set1){
 
 struct set* mergeSets(struct set* set1, struct set* set2){
     struct set* set = setcpy(set1);
-    for (struct set_node* n = set2->head; n != NULL; n = n->next){
+    for (struct set_node* n = set2->head; n != NULL; n = n->next)
         append(nodecpy(n), set);
-    }
     return set;
 }
 
 int setLen(struct set* set){
     int len = 0;
-    for (struct set_node* n = set->head; n != NULL; n = n->next)
-        len++;
+    for (struct set_node* n = set->head; n != NULL; n = n->next) { len++; }
     return len;
 }
 

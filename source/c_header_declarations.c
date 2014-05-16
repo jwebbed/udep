@@ -97,7 +97,7 @@ c_set *getDeclarations(char* header){
             for (struct set_node* n = include_set->head; n != NULL; n = n->next) {
                 inc = includeInit(n->data);
                 if (inc.type == global){
-                    if ((found_set = checkForCSet(header_map, inc.name)) != NULL){
+                    if ((found_set = getCSet(header_map, inc.name)) != NULL){
                         set = mergeCSet(set, found_set);
                     } else {
                         set = mergeCSet(set, getDeclarations(inc.name));

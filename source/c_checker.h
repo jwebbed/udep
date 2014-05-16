@@ -21,5 +21,5 @@ typedef struct set c_map;
 extern c_map* header_map;
 #define initCMap() initSet()
 void appendCSet(c_map *map, c_set *set);
-c_set * checkForCSet(c_map *map, char* name);
+c_set * getCSet(c_map *map, char* name);
 void freeCMap(c_map* map);

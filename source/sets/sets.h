@@ -19,3 +19,4 @@ struct set* mergeSets(struct set* set1, struct set* set2);
 int setLen(struct set* set);
 struct set* setcpy(struct set* set1);
 struct set_node* linSearch(struct set* set, char * data);
+struct set* uniqueSet(struct set* set1, struct set* set2);
