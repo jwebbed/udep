@@ -1,6 +1,4 @@
-build: mkdirs udep
-
-udep: comp/udep.o comp/sets/sets.o comp/c.a
+udep: comp/udep.o comp/sets.o comp/c.a
 	gcc $^ -o $@
 
 comp/c.a: comp/csearch.a comp/c_checker.o comp/c_header_declarations.o
@@ -12,11 +10,8 @@ comp/csearch.a: comp/csearch_helpers.o comp/csearch_include.o comp/csearch_func.
 comp/%.o: source/%.c
 	gcc -c -o $@ $<
 
-comp/sets/%.o: source/sets/%.c
-	gcc -c -o $@ $<
-
-mkdirs:
-	mkdir -p comp/sets
+comp/sets.o:
+	gcc -c -o $@ source/sets/sets.c
 
 clean:
 	rm -rf comp/*

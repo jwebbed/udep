@@ -17,3 +17,9 @@ c_set* checkForCSet(c_map *map, char* name){
     else
         return NULL;
 }
+
+void freeCMap(c_map* map){
+    for (struct set_node* n = map->head; n != NULL; n = n->next)
+        freeCSet((c_set*)n->meta);
+    freeSet(map);
+}

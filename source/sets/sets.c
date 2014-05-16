@@ -138,5 +138,17 @@ struct set_node* linSearch(struct set* set, char * data){
     return NULL;
 }
 
+/*
+ * Returns the set of nodes that have unique strings for
+ * for the char* data member of the struct
+ */
+struct set* uniqueSet(struct set* set1, struct set* set2){
+    struct set* f_set = initSet();
+    for (struct set_node* n = set1->head; n != NULL; n = n->next){
+        if (linSearch(set2, n->data) == NULL)
+            append(nodecpy(n), f_set);
+    }
+    return f_set;
+}
 
 
