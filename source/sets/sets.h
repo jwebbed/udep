@@ -16,6 +16,7 @@ void freeSet(struct set* set);
 void printSet(struct set* set);
 int nodeInSet(struct set_node* node, struct set* set);
 struct set* mergeSets(struct set* set1, struct set* set2);
+struct set* mergeNSets(int count, ...);
 int setLen(struct set* set);
 struct set* setcpy(struct set* set1);
 struct set_node* linSearch(struct set* set, char * data);
