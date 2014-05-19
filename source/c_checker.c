@@ -4,9 +4,6 @@
 
 #include "c_checker.h"
 
-
-
-
 void check_c(char* prog){
     struct set* function_set = findFunctionCalls(prog);
     struct set* struct_set = findStructs(prog);

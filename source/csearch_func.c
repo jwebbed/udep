@@ -10,10 +10,10 @@ enum func {
     declaration
 };
 
-char* keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
+const char* keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
 
 bool isKeyword(char* buf){
-    char* word;
+    const char* word;
     int i = 0;
     for (word = keywords[i]; i < 6; word = keywords[++i]){
         if (strcmp(buf, word) == 0)
