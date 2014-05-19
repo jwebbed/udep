@@ -1,4 +1,7 @@
 #include <stdbool.h>
+#include "cset.h"
+
+//#include "c_checker.h"
 
 // Function Call Finders
 struct set* _findFunctionCalls(char * prog, int header);
@@ -19,6 +22,9 @@ typedef enum {
 typedef struct {
     char* name;
     include_type type;
+    c_set* complete_set;
+    c_set* unique_set;
+    bool used;
 } include;
 
 include includeInit(char* name);

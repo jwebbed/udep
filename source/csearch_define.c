@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "sets/sets.h"
-#include "csearch.h"
+#include "c_checker.h"
 
 enum declare {
     pound,

@@ -3,7 +3,9 @@
 #include <string.h>
 
 #include "c_checker.h"
-#include "csearch.h"
+
+
+
 
 void check_c(char* prog){
     struct set* function_set = findFunctionCalls(prog);
@@ -20,12 +22,14 @@ void check_c(char* prog){
             getDeclarations(inc.name);
     }
     
+    /*
     for (n = header_map->head; n != NULL; n = n->next){
         printf("%s\n", n->data);
         printf("---------\n");
         printSet(((c_set*)n->meta)->function_set);
         printf("\n");
     }
+    */
 
     freeSet(function_set);
     freeSet(struct_set);

@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "sets/sets.h"
-#include "csearch.h"
+#include "c_checker.h"
 
 
 bool isLowerCase(char c){

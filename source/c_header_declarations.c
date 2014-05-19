@@ -5,7 +5,6 @@
 #include <errno.h>
 
 #include "c_checker.h"
-#include "csearch.h"
 
 // checks if a header file exists in the input dir,
 // returns 1 if sucessful 0 if not

@@ -40,7 +40,6 @@
 		B92EB3D718DE81CC00BB6911 /* udep.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = udep.1; sourceTree = "<group>"; };
 		B92EB3DF18DE822100BB6911 /* udep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udep.h; sourceTree = "<group>"; };
 		B92EB3E018DE826400BB6911 /* csearch_helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_helpers.c; sourceTree = "<group>"; };
-		B945F3C71922CBD4002A492F /* csearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csearch.h; sourceTree = "<group>"; };
 		B945F3C81922CCED002A492F /* csearch_include.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_include.c; sourceTree = "<group>"; };
 		B945F3CA1922CE6E002A492F /* csearch_func.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_func.c; sourceTree = "<group>"; };
 		B945F3CE1922CFF7002A492F /* csearch_enum_struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_enum_struct.c; sourceTree = "<group>"; };
@@ -110,7 +109,6 @@
 		B945F3C61922CB28002A492F /* C Searchers */ = {
 			isa = PBXGroup;
 			children = (
-				B945F3C71922CBD4002A492F /* csearch.h */,
 				B92EB3E018DE826400BB6911 /* csearch_helpers.c */,
 				B945F3C81922CCED002A492F /* csearch_include.c */,
 				B945F3CA1922CE6E002A492F /* csearch_func.c */,
