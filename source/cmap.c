@@ -24,9 +24,11 @@ void freeCMap(c_map* map){
     freeSet(map);
 }
 
-/*
+
 c_set* mergeCMapToCSet(c_map* map){
-    
+    c_set* set = initCSet();
+    for (struct set_node* n = map->head; n != NULL; n = n->next)
+        set = mergeCSet(set, (c_set*)n->meta);
+    return set;
     
 }
-*/

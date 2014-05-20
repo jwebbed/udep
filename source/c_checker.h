@@ -24,6 +24,7 @@ extern c_map* header_map;
 void appendCSet(c_map *map, c_set *set);
 c_set * getCSet(c_map *map, char* name);
 void freeCMap(c_map* map);
+c_set* mergeCMapToCSet(c_map* map);
 
 // Function Call Finders
 struct set* _findFunctionCalls(char * prog, int header);
