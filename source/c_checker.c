@@ -25,14 +25,14 @@ void check_c(char* prog){
             getDeclarations(inc.name);
     }
     
-    
-    
+    /*
     for (n = header_map->head; n != NULL; n = n->next){
         printf("%s\n", n->data);
         printf("---------\n");
         printSet(((c_set*)n->meta)->function_set);
         printf("\n");
     }
+     */
 
     freeCSet(set);
     freeCMap(header_map);
