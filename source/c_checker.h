@@ -74,8 +74,6 @@ typedef struct {
 
 include includeInit(char* name);
 
-// Internal
-
 #define isAlphabetic(c) (isLowerCase(c) || isUpperCase(c))
 #define validInitialIndentifierChar(c) (isAlphabetic((c)) || (c) == '_')
 #define validIndentifierChar(c) (isAlphanumeric(c) || (c) == '_')

@@ -19,9 +19,9 @@
 		B98E006819295C17005FD6E0 /* cset.c in Sources */ = {isa = PBXBuildFile; fileRef = B98E006719295C17005FD6E0 /* cset.c */; };
 		B9946FD91922D7F00024A52B /* sets.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FD71922D7F00024A52B /* sets.c */; };
 		B9946FDD1923BB970024A52B /* cmap.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FDC1923BB970024A52B /* cmap.c */; };
-		B9A8D44D192C0DDD00C84F50 /* cfu.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D446192C0DDD00C84F50 /* cfu.c */; };
-		B9A8D44E192C0DDD00C84F50 /* cfuhash.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D448192C0DDD00C84F50 /* cfuhash.c */; };
-		B9A8D451192C0E7500C84F50 /* cfustring.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D450192C0E7500C84F50 /* cfustring.c */; };
+		B9A8D459192C1B1E00C84F50 /* cfustring.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D456192C1B1E00C84F50 /* cfustring.c */; };
+		B9A8D45A192C1B1E00C84F50 /* cfuhash.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D457192C1B1E00C84F50 /* cfuhash.c */; };
+		B9A8D45B192C1B1E00C84F50 /* cfu.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D458192C1B1E00C84F50 /* cfu.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,13 +54,13 @@
 		B9946FD81922D7F00024A52B /* sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sets.h; sourceTree = "<group>"; };
 		B9946FDC1923BB970024A52B /* cmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmap.c; sourceTree = "<group>"; };
 		B9A8D444192C0B6A00C84F50 /* hashtable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hashtable.h; sourceTree = "<group>"; };
-		B9A8D446192C0DDD00C84F50 /* cfu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cfu.c; path = libcfu/cfu.c; sourceTree = SOURCE_ROOT; };
-		B9A8D447192C0DDD00C84F50 /* cfu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cfu.h; path = libcfu/cfu.h; sourceTree = SOURCE_ROOT; };
-		B9A8D448192C0DDD00C84F50 /* cfuhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cfuhash.c; path = libcfu/cfuhash.c; sourceTree = SOURCE_ROOT; };
-		B9A8D449192C0DDD00C84F50 /* cfuhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cfuhash.h; path = libcfu/cfuhash.h; sourceTree = SOURCE_ROOT; };
-		B9A8D44B192C0DDD00C84F50 /* cfustring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cfustring.h; path = libcfu/cfustring.h; sourceTree = SOURCE_ROOT; };
-		B9A8D44C192C0DDD00C84F50 /* cfutypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cfutypes.h; path = libcfu/cfutypes.h; sourceTree = SOURCE_ROOT; };
-		B9A8D450192C0E7500C84F50 /* cfustring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cfustring.c; path = libcfu/cfustring.c; sourceTree = SOURCE_ROOT; };
+		B9A8D452192C1B1E00C84F50 /* cfustring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfustring.h; sourceTree = "<group>"; };
+		B9A8D453192C1B1E00C84F50 /* cfuhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfuhash.h; sourceTree = "<group>"; };
+		B9A8D454192C1B1E00C84F50 /* cfu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfu.h; sourceTree = "<group>"; };
+		B9A8D455192C1B1E00C84F50 /* cfutypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfutypes.h; sourceTree = "<group>"; };
+		B9A8D456192C1B1E00C84F50 /* cfustring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfustring.c; sourceTree = "<group>"; };
+		B9A8D457192C1B1E00C84F50 /* cfuhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfuhash.c; sourceTree = "<group>"; };
+		B9A8D458192C1B1E00C84F50 /* cfu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfu.c; sourceTree = "<group>"; };
 		B9AF83D519005BA200C80BA7 /* c_checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,13 +151,13 @@
 		B9A8D445192C0DB400C84F50 /* cfulib */ = {
 			isa = PBXGroup;
 			children = (
-				B9A8D450192C0E7500C84F50 /* cfustring.c */,
-				B9A8D446192C0DDD00C84F50 /* cfu.c */,
-				B9A8D447192C0DDD00C84F50 /* cfu.h */,
-				B9A8D448192C0DDD00C84F50 /* cfuhash.c */,
-				B9A8D449192C0DDD00C84F50 /* cfuhash.h */,
-				B9A8D44B192C0DDD00C84F50 /* cfustring.h */,
-				B9A8D44C192C0DDD00C84F50 /* cfutypes.h */,
+				B9A8D452192C1B1E00C84F50 /* cfustring.h */,
+				B9A8D453192C1B1E00C84F50 /* cfuhash.h */,
+				B9A8D454192C1B1E00C84F50 /* cfu.h */,
+				B9A8D455192C1B1E00C84F50 /* cfutypes.h */,
+				B9A8D456192C1B1E00C84F50 /* cfustring.c */,
+				B9A8D457192C1B1E00C84F50 /* cfuhash.c */,
+				B9A8D458192C1B1E00C84F50 /* cfu.c */,
 			);
 			name = cfulib;
 			sourceTree = "<group>";
@@ -213,18 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9A8D44D192C0DDD00C84F50 /* cfu.c in Sources */,
 				B9946FDD1923BB970024A52B /* cmap.c in Sources */,
-				B9A8D44E192C0DDD00C84F50 /* cfuhash.c in Sources */,
 				B9946FD91922D7F00024A52B /* sets.c in Sources */,
+				B9A8D45A192C1B1E00C84F50 /* cfuhash.c in Sources */,
 				B945F3CB1922CE6E002A492F /* csearch_func.c in Sources */,
 				B98E006819295C17005FD6E0 /* cset.c in Sources */,
 				B92EB3D618DE81CC00BB6911 /* udep.c in Sources */,
 				B945F3D11922D25D002A492F /* csearch_define.c in Sources */,
 				B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */,
-				B9A8D451192C0E7500C84F50 /* cfustring.c in Sources */,
+				B9A8D45B192C1B1E00C84F50 /* cfu.c in Sources */,
 				B945F3CF1922CFF7002A492F /* csearch_enum_struct.c in Sources */,
 				B9478464191D888000CC5610 /* c_checker.c in Sources */,
+				B9A8D459192C1B1E00C84F50 /* cfustring.c in Sources */,
 				B945F3C91922CCED002A492F /* csearch_include.c in Sources */,
 				B92EB3E118DE826400BB6911 /* csearch_helpers.c in Sources */,
 			);
