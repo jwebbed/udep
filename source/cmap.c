@@ -24,3 +24,9 @@ void freeCMap(c_map* map){
     freeSet(map);
 }
 
+/*
+c_set* mergeCMapToCSet(c_map* map){
+    
+    
+}
+*/

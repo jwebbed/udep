@@ -92,5 +92,8 @@ include includeInit(char* name){
         inc.type = local;
     inc.name = calloc(strlen(name) - 1, 0);
     strncpy(inc.name, name + 1, strlen(name) - 2);
+    inc.complete_set = NULL;
+    inc.unique_set = NULL;
+    inc.used = false;
     return inc;
 }

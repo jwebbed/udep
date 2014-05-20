@@ -117,21 +117,16 @@ struct set* setcpy(struct set* set1){
     return set;
 }
 
-struct set* mergeSets(struct set* set1, struct set* set2){
-    struct set* set = setcpy(set1);
-    for (struct set_node* n = set2->head; n != NULL; n = n->next)
-        append(nodecpy(n), set);
-    return set;
-}
-
 struct set* mergeNSets(int count, ...){
     va_list list;
     va_start(list, count);
     struct set* r_set = initSet();
     struct set* g_set;
+    struct set_node* n;
     for (int i = 0; i < count; i++){
         g_set = va_arg(list, struct set*);
-        r_set = mergeSets(r_set, g_set);
+        for (n = g_set->head; n != NULL; n = n->next)
+            append(nodecpy(n), r_set);
     }
     return r_set;
 }
