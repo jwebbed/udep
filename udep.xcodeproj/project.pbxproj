@@ -38,6 +38,7 @@
 		B9A8D4B0192DB5D300C84F50 /* csearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csearch.h; sourceTree = "<group>"; };
 		B9A8D4B1192E559E00C84F50 /* c_set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_set.cpp; sourceTree = "<group>"; };
 		B9A8D4B2192E559E00C84F50 /* c_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c_set.h; sourceTree = "<group>"; };
+		B9A8D4B4192EC10700C84F50 /* c_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_map.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				B9A8D4A7192DB59A00C84F50 /* csearch */,
 				B9A8D4B1192E559E00C84F50 /* c_set.cpp */,
 				B9A8D4B2192E559E00C84F50 /* c_set.h */,
+				B9A8D4B4192EC10700C84F50 /* c_map.h */,
 			);
 			name = C;
 			sourceTree = "<group>";
