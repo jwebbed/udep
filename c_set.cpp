@@ -16,16 +16,6 @@ c_set::c_set(char* prog){
     this->include_set = findIncludes(prog);
 }
 /*
-
- c_set* buildCSet(char* prog){
- c_set* set = malloc(sizeof(c_set));
- set->function_set = findFunctionCalls(prog);
- set->struct_set = findStructs(prog);
- set->enum_set = findEnums(prog);
- set->include_set = findIncludes(prog);
- set->name = NULL;
- return set;
- }
  
  c_set *mergeCSet(c_set *set1, c_set *set2){
  c_set *set = initCSet();
@@ -36,16 +26,6 @@ c_set::c_set(char* prog){
  return set;
  }
  
- 
- c_set *initCSet(){
- c_set *set = malloc(sizeof(c_set));
- set->name = NULL;
- set->enum_set = initSet();
- set->function_set = initSet();
- set->struct_set = initSet();
- set->include_set = initSet();
- return set;
- }
  
  c_set* csetcpy(c_set *set){
  c_set * nset = initCSet();
