@@ -21,10 +21,11 @@
  */
 
 #include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
 
-#include "c_checker.h"
+using namespace std;
+
+#include "csearch.h"
 
 enum include {
     pound,
@@ -103,19 +104,4 @@ struct set* findIncludes(char * prog){
         }
     }
     return set;
-}
-
-
-include includeInit(char* name){
-    include inc;
-    if (name[0] == '<')
-        inc.type = global;
-    else if (name[0] == '"')
-        inc.type = local;
-    inc.name = calloc(strlen(name) - 1, 0);
-    strncpy(inc.name, name + 1, strlen(name) - 2);
-    inc.complete_set = NULL;
-    inc.unique_set = NULL;
-    inc.used = false;
-    return inc;
 }
