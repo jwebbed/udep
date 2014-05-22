@@ -7,64 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B92EB3D618DE81CC00BB6911 /* udep.c in Sources */ = {isa = PBXBuildFile; fileRef = B92EB3D518DE81CC00BB6911 /* udep.c */; };
-		B92EB3D818DE81CC00BB6911 /* udep.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B92EB3D718DE81CC00BB6911 /* udep.1 */; };
-		B92EB3E118DE826400BB6911 /* csearch_helpers.c in Sources */ = {isa = PBXBuildFile; fileRef = B92EB3E018DE826400BB6911 /* csearch_helpers.c */; };
-		B945F3C91922CCED002A492F /* csearch_include.c in Sources */ = {isa = PBXBuildFile; fileRef = B945F3C81922CCED002A492F /* csearch_include.c */; };
-		B945F3CB1922CE6E002A492F /* csearch_func.c in Sources */ = {isa = PBXBuildFile; fileRef = B945F3CA1922CE6E002A492F /* csearch_func.c */; };
-		B945F3CF1922CFF7002A492F /* csearch_enum_struct.c in Sources */ = {isa = PBXBuildFile; fileRef = B945F3CE1922CFF7002A492F /* csearch_enum_struct.c */; };
-		B945F3D11922D25D002A492F /* csearch_define.c in Sources */ = {isa = PBXBuildFile; fileRef = B945F3D01922D25D002A492F /* csearch_define.c */; };
-		B9478464191D888000CC5610 /* c_checker.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478463191D888000CC5610 /* c_checker.c */; };
-		B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */ = {isa = PBXBuildFile; fileRef = B9478465191D89DD00CC5610 /* c_header_declarations.c */; };
-		B98E006819295C17005FD6E0 /* cset.c in Sources */ = {isa = PBXBuildFile; fileRef = B98E006719295C17005FD6E0 /* cset.c */; };
-		B9946FD91922D7F00024A52B /* sets.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FD71922D7F00024A52B /* sets.c */; };
-		B9946FDD1923BB970024A52B /* cmap.c in Sources */ = {isa = PBXBuildFile; fileRef = B9946FDC1923BB970024A52B /* cmap.c */; };
-		B9A8D459192C1B1E00C84F50 /* cfustring.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D456192C1B1E00C84F50 /* cfustring.c */; };
-		B9A8D45A192C1B1E00C84F50 /* cfuhash.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D457192C1B1E00C84F50 /* cfuhash.c */; };
-		B9A8D45B192C1B1E00C84F50 /* cfu.c in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D458192C1B1E00C84F50 /* cfu.c */; };
+		B9A8D4A5192DB45000C84F50 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4A3192DB45000C84F50 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B92EB3D018DE81CC00BB6911 /* CopyFiles */ = {
+		B9A8D494192DB37700C84F50 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				B92EB3D818DE81CC00BB6911 /* udep.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B92EB3D218DE81CC00BB6911 /* udep */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = udep; sourceTree = BUILT_PRODUCTS_DIR; };
-		B92EB3D518DE81CC00BB6911 /* udep.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = udep.c; sourceTree = "<group>"; };
-		B92EB3D718DE81CC00BB6911 /* udep.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = udep.1; sourceTree = "<group>"; };
-		B92EB3DF18DE822100BB6911 /* udep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udep.h; sourceTree = "<group>"; };
-		B92EB3E018DE826400BB6911 /* csearch_helpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_helpers.c; sourceTree = "<group>"; };
-		B945F3C81922CCED002A492F /* csearch_include.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_include.c; sourceTree = "<group>"; };
-		B945F3CA1922CE6E002A492F /* csearch_func.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_func.c; sourceTree = "<group>"; };
-		B945F3CE1922CFF7002A492F /* csearch_enum_struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_enum_struct.c; sourceTree = "<group>"; };
-		B945F3D01922D25D002A492F /* csearch_define.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = csearch_define.c; sourceTree = "<group>"; };
-		B9478463191D888000CC5610 /* c_checker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = c_checker.c; sourceTree = "<group>"; };
-		B9478465191D89DD00CC5610 /* c_header_declarations.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = c_header_declarations.c; sourceTree = "<group>"; };
-		B98E006719295C17005FD6E0 /* cset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cset.c; sourceTree = "<group>"; };
-		B9946FD71922D7F00024A52B /* sets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sets.c; sourceTree = "<group>"; };
-		B9946FD81922D7F00024A52B /* sets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sets.h; sourceTree = "<group>"; };
-		B9946FDC1923BB970024A52B /* cmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cmap.c; sourceTree = "<group>"; };
-		B9A8D452192C1B1E00C84F50 /* cfustring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfustring.h; sourceTree = "<group>"; };
-		B9A8D453192C1B1E00C84F50 /* cfuhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfuhash.h; sourceTree = "<group>"; };
-		B9A8D454192C1B1E00C84F50 /* cfu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfu.h; sourceTree = "<group>"; };
-		B9A8D455192C1B1E00C84F50 /* cfutypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfutypes.h; sourceTree = "<group>"; };
-		B9A8D456192C1B1E00C84F50 /* cfustring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfustring.c; sourceTree = "<group>"; };
-		B9A8D457192C1B1E00C84F50 /* cfuhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfuhash.c; sourceTree = "<group>"; };
-		B9A8D458192C1B1E00C84F50 /* cfu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfu.c; sourceTree = "<group>"; };
-		B9AF83D519005BA200C80BA7 /* c_checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
+		B9A8D496192DB37700C84F50 /* udep */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = udep; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A8D4A3192DB45000C84F50 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = source/main.cpp; sourceTree = "<group>"; };
+		B9A8D4A4192DB45000C84F50 /* udep.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; name = udep.1; path = source/udep.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B92EB3CF18DE81CC00BB6911 /* Frameworks */ = {
+		B9A8D493192DB37700C84F50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,94 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B92EB3C918DE81CC00BB6911 = {
+		B9A8D48D192DB37700C84F50 = {
 			isa = PBXGroup;
 			children = (
-				B92EB3D418DE81CC00BB6911 /* source */,
-				B92EB3D318DE81CC00BB6911 /* Products */,
+				B9A8D4A2192DB44100C84F50 /* source */,
+				B9A8D497192DB37700C84F50 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B92EB3D318DE81CC00BB6911 /* Products */ = {
+		B9A8D497192DB37700C84F50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B92EB3D218DE81CC00BB6911 /* udep */,
+				B9A8D496192DB37700C84F50 /* udep */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B92EB3D418DE81CC00BB6911 /* source */ = {
+		B9A8D4A2192DB44100C84F50 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				B9A8D445192C0DB400C84F50 /* cfulib */,
-				B945F3D21922D783002A492F /* sets */,
-				B92EB3DE18DE81DB00BB6911 /* C */,
-				B92EB3D518DE81CC00BB6911 /* udep.c */,
-				B92EB3DF18DE822100BB6911 /* udep.h */,
-				B92EB3D718DE81CC00BB6911 /* udep.1 */,
+				B9A8D4A3192DB45000C84F50 /* main.cpp */,
+				B9A8D4A4192DB45000C84F50 /* udep.1 */,
 			);
 			name = source;
-			path = /Users/jonathanwebb/Projects/udep/source;
-			sourceTree = "<absolute>";
-		};
-		B92EB3DE18DE81DB00BB6911 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				B945F3C61922CB28002A492F /* C Searchers */,
-				B9946FDC1923BB970024A52B /* cmap.c */,
-				B98E006719295C17005FD6E0 /* cset.c */,
-				B9AF83D519005BA200C80BA7 /* c_checker.h */,
-				B9478463191D888000CC5610 /* c_checker.c */,
-				B9478465191D89DD00CC5610 /* c_header_declarations.c */,
-			);
-			name = C;
-			sourceTree = "<group>";
-		};
-		B945F3C61922CB28002A492F /* C Searchers */ = {
-			isa = PBXGroup;
-			children = (
-				B92EB3E018DE826400BB6911 /* csearch_helpers.c */,
-				B945F3C81922CCED002A492F /* csearch_include.c */,
-				B945F3CA1922CE6E002A492F /* csearch_func.c */,
-				B945F3CE1922CFF7002A492F /* csearch_enum_struct.c */,
-				B945F3D01922D25D002A492F /* csearch_define.c */,
-			);
-			name = "C Searchers";
-			sourceTree = "<group>";
-		};
-		B945F3D21922D783002A492F /* sets */ = {
-			isa = PBXGroup;
-			children = (
-				B9946FD71922D7F00024A52B /* sets.c */,
-				B9946FD81922D7F00024A52B /* sets.h */,
-			);
-			path = sets;
-			sourceTree = "<group>";
-		};
-		B9A8D445192C0DB400C84F50 /* cfulib */ = {
-			isa = PBXGroup;
-			children = (
-				B9A8D452192C1B1E00C84F50 /* cfustring.h */,
-				B9A8D453192C1B1E00C84F50 /* cfuhash.h */,
-				B9A8D454192C1B1E00C84F50 /* cfu.h */,
-				B9A8D455192C1B1E00C84F50 /* cfutypes.h */,
-				B9A8D456192C1B1E00C84F50 /* cfustring.c */,
-				B9A8D457192C1B1E00C84F50 /* cfuhash.c */,
-				B9A8D458192C1B1E00C84F50 /* cfu.c */,
-			);
-			name = cfulib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B92EB3D118DE81CC00BB6911 /* udep */ = {
+		B9A8D495192DB37700C84F50 /* udep */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B92EB3DB18DE81CC00BB6911 /* Build configuration list for PBXNativeTarget "udep" */;
+			buildConfigurationList = B9A8D49F192DB37700C84F50 /* Build configuration list for PBXNativeTarget "udep" */;
 			buildPhases = (
-				B92EB3CE18DE81CC00BB6911 /* Sources */,
-				B92EB3CF18DE81CC00BB6911 /* Frameworks */,
-				B92EB3D018DE81CC00BB6911 /* CopyFiles */,
+				B9A8D492192DB37700C84F50 /* Sources */,
+				B9A8D493192DB37700C84F50 /* Frameworks */,
+				B9A8D494192DB37700C84F50 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -169,61 +81,48 @@
 			);
 			name = udep;
 			productName = udep;
-			productReference = B92EB3D218DE81CC00BB6911 /* udep */;
+			productReference = B9A8D496192DB37700C84F50 /* udep */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B92EB3CA18DE81CC00BB6911 /* Project object */ = {
+		B9A8D48E192DB37700C84F50 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jonathan Webb";
 			};
-			buildConfigurationList = B92EB3CD18DE81CC00BB6911 /* Build configuration list for PBXProject "udep" */;
+			buildConfigurationList = B9A8D491192DB37700C84F50 /* Build configuration list for PBXProject "udep" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = B92EB3C918DE81CC00BB6911;
-			productRefGroup = B92EB3D318DE81CC00BB6911 /* Products */;
+			mainGroup = B9A8D48D192DB37700C84F50;
+			productRefGroup = B9A8D497192DB37700C84F50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B92EB3D118DE81CC00BB6911 /* udep */,
+				B9A8D495192DB37700C84F50 /* udep */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B92EB3CE18DE81CC00BB6911 /* Sources */ = {
+		B9A8D492192DB37700C84F50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9946FDD1923BB970024A52B /* cmap.c in Sources */,
-				B9946FD91922D7F00024A52B /* sets.c in Sources */,
-				B9A8D45A192C1B1E00C84F50 /* cfuhash.c in Sources */,
-				B945F3CB1922CE6E002A492F /* csearch_func.c in Sources */,
-				B98E006819295C17005FD6E0 /* cset.c in Sources */,
-				B92EB3D618DE81CC00BB6911 /* udep.c in Sources */,
-				B945F3D11922D25D002A492F /* csearch_define.c in Sources */,
-				B9478466191D89DD00CC5610 /* c_header_declarations.c in Sources */,
-				B9A8D45B192C1B1E00C84F50 /* cfu.c in Sources */,
-				B945F3CF1922CFF7002A492F /* csearch_enum_struct.c in Sources */,
-				B9478464191D888000CC5610 /* c_checker.c in Sources */,
-				B9A8D459192C1B1E00C84F50 /* cfustring.c in Sources */,
-				B945F3C91922CCED002A492F /* csearch_include.c in Sources */,
-				B92EB3E118DE826400BB6911 /* csearch_helpers.c in Sources */,
+				B9A8D4A5192DB45000C84F50 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B92EB3D918DE81CC00BB6911 /* Debug */ = {
+		B9A8D49D192DB37700C84F50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,7 +160,7 @@
 			};
 			name = Debug;
 		};
-		B92EB3DA18DE81CC00BB6911 /* Release */ = {
+		B9A8D49E192DB37700C84F50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,14 +192,14 @@
 			};
 			name = Release;
 		};
-		B92EB3DC18DE81CC00BB6911 /* Debug */ = {
+		B9A8D4A0192DB37700C84F50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B92EB3DD18DE81CC00BB6911 /* Release */ = {
+		B9A8D4A1192DB37700C84F50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,25 +209,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B92EB3CD18DE81CC00BB6911 /* Build configuration list for PBXProject "udep" */ = {
+		B9A8D491192DB37700C84F50 /* Build configuration list for PBXProject "udep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B92EB3D918DE81CC00BB6911 /* Debug */,
-				B92EB3DA18DE81CC00BB6911 /* Release */,
+				B9A8D49D192DB37700C84F50 /* Debug */,
+				B9A8D49E192DB37700C84F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B92EB3DB18DE81CC00BB6911 /* Build configuration list for PBXNativeTarget "udep" */ = {
+		B9A8D49F192DB37700C84F50 /* Build configuration list for PBXNativeTarget "udep" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B92EB3DC18DE81CC00BB6911 /* Debug */,
-				B92EB3DD18DE81CC00BB6911 /* Release */,
+				B9A8D4A0192DB37700C84F50 /* Debug */,
+				B9A8D4A1192DB37700C84F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B92EB3CA18DE81CC00BB6911 /* Project object */;
+	rootObject = B9A8D48E192DB37700C84F50 /* Project object */;
 }

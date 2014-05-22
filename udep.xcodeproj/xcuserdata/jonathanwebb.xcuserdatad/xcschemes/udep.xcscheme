@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B92EB3D118DE81CC00BB6911"
+               BlueprintIdentifier = "B9A8D495192DB37700C84F50"
                BuildableName = "udep"
                BlueprintName = "udep"
                ReferencedContainer = "container:udep.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B92EB3D118DE81CC00BB6911"
+            BlueprintIdentifier = "B9A8D495192DB37700C84F50"
             BuildableName = "udep"
             BlueprintName = "udep"
             ReferencedContainer = "container:udep.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B92EB3D118DE81CC00BB6911"
+            BlueprintIdentifier = "B9A8D495192DB37700C84F50"
             BuildableName = "udep"
             BlueprintName = "udep"
             ReferencedContainer = "container:udep.xcodeproj">
@@ -68,14 +68,14 @@
    </LaunchAction>
    <ProfileAction
       shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = "/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/templates/Leaks.tracetemplate"
+      savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B92EB3D118DE81CC00BB6911"
+            BlueprintIdentifier = "B9A8D495192DB37700C84F50"
             BuildableName = "udep"
             BlueprintName = "udep"
             ReferencedContainer = "container:udep.xcodeproj">
