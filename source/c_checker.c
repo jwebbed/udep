@@ -26,15 +26,7 @@
 
 #include "c_checker.h"
 
-c_set* buildCSet(char* prog){
-    c_set* set = malloc(sizeof(c_set));
-    set->function_set = findFunctionCalls(prog);
-    set->struct_set = findStructs(prog);
-    set->enum_set = findEnums(prog);
-    set->include_set = findIncludes(prog);
-    set->name = NULL;
-    return set;
-}
+
 
 void check_c(char* prog){
     c_set* set = buildCSet(prog);

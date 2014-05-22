@@ -12,6 +12,7 @@
 		B9A8D4AD192DB5AD00C84F50 /* csearch_helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4A9192DB5AD00C84F50 /* csearch_helpers.cpp */; };
 		B9A8D4AE192DB5AD00C84F50 /* csearch_include.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4AA192DB5AD00C84F50 /* csearch_include.cpp */; };
 		B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4AB192DB5AD00C84F50 /* csearch_enum_struct.cpp */; };
+		B9A8D4B3192E559E00C84F50 /* c_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4B1192E559E00C84F50 /* c_set.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		B9A8D4AA192DB5AD00C84F50 /* csearch_include.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csearch_include.cpp; path = source/csearch_include.cpp; sourceTree = "<group>"; };
 		B9A8D4AB192DB5AD00C84F50 /* csearch_enum_struct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csearch_enum_struct.cpp; path = source/csearch_enum_struct.cpp; sourceTree = "<group>"; };
 		B9A8D4B0192DB5D300C84F50 /* csearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csearch.h; sourceTree = "<group>"; };
+		B9A8D4B1192E559E00C84F50 /* c_set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_set.cpp; sourceTree = "<group>"; };
+		B9A8D4B2192E559E00C84F50 /* c_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c_set.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				B9A8D4A7192DB59A00C84F50 /* csearch */,
+				B9A8D4B1192E559E00C84F50 /* c_set.cpp */,
+				B9A8D4B2192E559E00C84F50 /* c_set.h */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				B9A8D4AD192DB5AD00C84F50 /* csearch_helpers.cpp in Sources */,
 				B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */,
 				B9A8D4AE192DB5AD00C84F50 /* csearch_include.cpp in Sources */,
+				B9A8D4B3192E559E00C84F50 /* c_set.cpp in Sources */,
 				B9A8D4AC192DB5AD00C84F50 /* csearch_func.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
