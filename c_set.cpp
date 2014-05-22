@@ -7,7 +7,14 @@
 //
 
 #include "c_set.h"
+#include "csearch.h"
 
+c_set::c_set(char* prog){
+    this->function_set = findFunctionCalls(prog);
+    this->struct_set = findStructs(prog);
+    this->enum_set = findEnums(prog);
+    this->include_set = findIncludes(prog);
+}
 /*
 
  c_set* buildCSet(char* prog){

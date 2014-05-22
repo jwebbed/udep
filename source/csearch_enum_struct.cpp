@@ -34,8 +34,8 @@ enum _struct {
     _typedef
 };
 
-set<string> * findEnumStructs(char* prog, const char* es){
-    set<string> *set = new std::set<string>;
+set<string> findEnumStructs(char* prog, const char* es){
+    set<string> set;
     char buf[BUF_SIZE];
     
     size_t s_len = strlen(es);
@@ -105,7 +105,7 @@ set<string> * findEnumStructs(char* prog, const char* es){
         } else if (state == enum_struct && !validIndentifierChar(ch)){
             strncpy(buf, prog + start, k - start);
             buf[k - start] = '\0';
-            set->insert(string(buf));
+            set.insert(string(buf));
             state = initial;
         }
     }

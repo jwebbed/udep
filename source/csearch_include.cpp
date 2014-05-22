@@ -47,8 +47,8 @@ enum include {
 /* I seriously couldnt be bothered with posix regex so I just used a DFA
  it's probably more efficient tbh as i'm 90% sure it uses a DFA anyways,
  this allows me to optimize for the specific situation and skip characters */
-set<string> *findIncludes(char * prog){
-    set<string> *set = new std::set<string>;
+set<string> findIncludes(char * prog){
+    set<string> set;
     char buf[BUF_SIZE];
     
     enum include state = nope;
@@ -93,7 +93,7 @@ set<string> *findIncludes(char * prog){
                 //printf("%.*s\n", k - start + 1, prog + start);
                 strncpy(buf, prog + start + 9, k - start - 8);
                 buf[k - start - 8] = '\0';
-                set->insert(string(buf));
+                set.insert(string(buf));
             } else {
                 state = fail;
             }

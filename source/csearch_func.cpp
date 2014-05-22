@@ -48,8 +48,8 @@ bool isKeyword(char* buf){
     return false;
 }
 
-set<string>* _findFunctionCalls(char * prog, int header){
-    set<string> *set = new std::set<string>;
+set<string> _findFunctionCalls(char * prog, int header){
+    set<string> set;
     char buf[BUF_SIZE];
     
     enum func state = init;
@@ -114,7 +114,7 @@ set<string>* _findFunctionCalls(char * prog, int header){
                 buf[k - start - 1] = '\0';
                 stripWhiteSpace(buf);
                 if (!isKeyword(buf))
-                    set->insert(string(buf));
+                    set.insert(string(buf));
             }
             state = init;
             goto init;

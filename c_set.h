@@ -22,4 +22,5 @@ public:
     std::set<std::string> struct_set;
     std::set<std::string> enum_set;
     std::set<std::string> include_set;
+    c_set (char * prog);
 };
