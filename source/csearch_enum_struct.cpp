@@ -20,12 +20,12 @@
  THE SOFTWARE.
  */
 
-#include <string.h>
 #include <iostream>
-
-using namespace std;
+#include <string.h>
 
 #include "csearch.h"
+
+using namespace std;
 
 enum _struct {
     initial,
@@ -34,8 +34,8 @@ enum _struct {
     _typedef
 };
 
-struct set* findEnumStructs(char* prog, const char* es){
-    struct set* set = initSet();
+set<string> * findEnumStructs(char* prog, const char* es){
+    set<string> *set = new std::set<string>;
     char buf[BUF_SIZE];
     
     size_t s_len = strlen(es);
@@ -105,7 +105,7 @@ struct set* findEnumStructs(char* prog, const char* es){
         } else if (state == enum_struct && !validIndentifierChar(ch)){
             strncpy(buf, prog + start, k - start);
             buf[k - start] = '\0';
-            appendString(buf, set);
+            set->insert(string(buf));
             state = initial;
         }
     }

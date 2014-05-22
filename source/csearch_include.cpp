@@ -20,12 +20,12 @@
  THE SOFTWARE.
  */
 
-#include <string.h>
 #include <iostream>
-
-using namespace std;
+#include <string.h>
 
 #include "csearch.h"
+
+using namespace std;
 
 enum include {
     pound,
@@ -47,8 +47,8 @@ enum include {
 /* I seriously couldnt be bothered with posix regex so I just used a DFA
  it's probably more efficient tbh as i'm 90% sure it uses a DFA anyways,
  this allows me to optimize for the specific situation and skip characters */
-struct set* findIncludes(char * prog){
-    struct set* set = initSet();
+set<string> *findIncludes(char * prog){
+    set<string> *set = new std::set<string>;
     char buf[BUF_SIZE];
     
     enum include state = nope;
@@ -93,7 +93,7 @@ struct set* findIncludes(char * prog){
                 //printf("%.*s\n", k - start + 1, prog + start);
                 strncpy(buf, prog + start + 9, k - start - 8);
                 buf[k - start - 8] = '\0';
-                appendString(buf, set);
+                set->insert(string(buf));
             } else {
                 state = fail;
             }

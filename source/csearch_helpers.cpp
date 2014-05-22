@@ -20,11 +20,10 @@
  THE SOFTWARE.
  */
 
+#include <iostream>
 #include <string.h>
 
 #include "csearch.h"
-
-#include <iostream>
 
 using namespace std;
 

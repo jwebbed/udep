@@ -20,8 +20,10 @@
  THE SOFTWARE.
  */
 
-#include <string.h>
 #include <iostream>
+#include <string>
+#include <string.h>
+
 #include "csearch.h"
 
 using namespace std;
@@ -46,8 +48,8 @@ bool isKeyword(char* buf){
     return false;
 }
 
-struct set* _findFunctionCalls(char * prog, int header){
-    struct set* set = initSet();
+set<string>* _findFunctionCalls(char * prog, int header){
+    set<string> *set = new std::set<string>;
     char buf[BUF_SIZE];
     
     enum func state = init;
@@ -111,7 +113,8 @@ struct set* _findFunctionCalls(char * prog, int header){
                 strncpy(buf, prog + start, k - start - 1);
                 buf[k - start - 1] = '\0';
                 stripWhiteSpace(buf);
-                if (!isKeyword(buf)) appendString(buf, set);
+                if (!isKeyword(buf))
+                    set->insert(string(buf));
             }
             state = init;
             goto init;

@@ -19,27 +19,16 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
+#include <set>
 
-
-struct set* _findFunctionCalls(char * prog, int header);
+std::set<std::string>* _findFunctionCalls(char * prog, int header);
 #define findFunctionCalls(prog) _findFunctionCalls((prog), 0)
 #define findFunctionDeclarations(prog) _findFunctionCalls((prog), 1)
 
-struct set* findIncludes(char * prog);
-struct set* findDefines(char * prog);
-struct set* findEnumStructs(char* prog, const char* es);
+std::set<std::string>* findIncludes(char * prog);
+std::set<std::string>* findEnumStructs(char* prog, const char* es);
 #define findStructs(prog) findEnumStructs((prog), "struct")
 #define findEnums(prog) findEnumStructs((prog), "enum")
-
-typedef struct {
-    char* name;
-    include_type type;
-    c_set* complete_set;
-    c_set* unique_set;
-    bool used;
-} include;
-
-include includeInit(char* name);
 
 #define isAlphabetic(c) (isLowerCase(c) || isUpperCase(c))
 #define validInitialIndentifierChar(c) (isAlphabetic((c)) || (c) == '_')
