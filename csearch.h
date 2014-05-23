@@ -20,6 +20,9 @@
  THE SOFTWARE.
  */
 
+#ifndef udep_csearch_h
+#define udep_csearch_h
+
 #include <set>
 
 std::set<std::string> _findFunctionCalls(char * prog, int header);
@@ -47,3 +50,5 @@ enum comment {
     block,
     line
 };
+
+#endif

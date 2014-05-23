@@ -26,8 +26,6 @@
 #include <iostream>
 #include <set>
 
-#endif /* defined(__udep__c_set__) */
-
 class c_set {
 public:
     std::string name;
@@ -38,3 +36,5 @@ public:
     c_set ();
     c_set (char * prog);
 };
+
+#endif /* defined(__udep__c_set__) */
