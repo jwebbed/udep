@@ -25,8 +25,11 @@
 #include <string.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string>
+#include <map>
 
-#include "c_checker.h"
+#include "c_map.h"
+
 
 // checks if a header file exists in the input dir,
 // returns 1 if sucessful 0 if not
@@ -81,7 +84,7 @@ int getHeader(char** file, char* header){
         long sz = ftell(fp);
         fseek(fp, 0L, SEEK_SET);
         
-        *file = calloc(sz + 1, sizeof(char));
+        *file = (char*)calloc(sz + 1, sizeof(char));
         fread(*file, sizeof(char), sz, fp);
         if (ferror(fp)){
             perror("fread");
@@ -95,26 +98,22 @@ int getHeader(char** file, char* header){
 
 c_map* header_map = NULL;
 
-c_set *getDeclarations(char* header){
+c_set getDeclarations(char* header){
     if (header_map == NULL)
-        header_map = initCMap();
+        header_map = new c_map();
     
-    c_set* set = initCSet();
-    c_set* found_set;
-    include inc;
+    c_set set;
+    c_set found_set;
     char* prog;
     
     if (getHeader(&prog, header)){
-        setname(set, header);
-        set->function_set = findFunctionDeclarations(prog);
-        set->struct_set = findStructs(prog);
-        set->enum_set = findEnums(prog);
+        set.name = std::string(header);
+        set = c_set(prog);
+        header_map->insert(set.name, set);
         
-        struct set* include_set = findIncludes(prog);
-        set->include_set = include_set;
-        appendCSet(header_map, csetcpy(set));
         
-        if (setLen(include_set) > 0){
+        if (set.include_set.size() > 0){
+            // fix this with the iterator for sets
             for (struct set_node* n = include_set->head; n != NULL; n = n->next) {
                 inc = includeInit(n->data);
                 if (inc.type == global){
