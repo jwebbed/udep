@@ -29,6 +29,7 @@
 #include <map>
 
 #include "c_map.h"
+#include "c_set.h"
 
 
 // checks if a header file exists in the input dir,
@@ -96,37 +97,41 @@ int getHeader(char** file, char* header){
     }
 }
 
-c_map* header_map = NULL;
+c_map_t* header_map = NULL;
+
+c_set getDeclarations(std::string header){
+    const char* c_str = header.c_str();
+    return getDeclarations(c_str);
+}
 
 c_set getDeclarations(char* header){
     if (header_map == NULL)
-        header_map = new c_map();
+        header_map = new c_map_t();
     
-    c_set set;
-    c_set found_set;
     char* prog;
-    
+    c_set * set;
     if (getHeader(&prog, header)){
-        set.name = std::string(header);
-        set = c_set(prog);
-        header_map->insert(set.name, set);
+        set = new c_set(prog, header);
+        
+        c_set unique_set(set);
+        header_map->insert({unique_set.name, unique_set});
         
         
-        if (set.include_set.size() > 0){
-            // fix this with the iterator for sets
-            for (struct set_node* n = include_set->head; n != NULL; n = n->next) {
-                inc = includeInit(n->data);
-                if (inc.type == global){
-                    if ((found_set = getCSet(header_map, inc.name)) != NULL){
-                        set = mergeCSet(set, found_set);
+        if (set->include_set.size() > 0){
+            for (std::string s : set->include_set){
+                if (s[0] == '<'){
+                    std::string str2 = s.substr(1, (s.length() - 2));
+                    if (header_map->find(str2) != header_map->end()){
+                        set->merge((*header_map)[str2]);
                     } else {
-                        set = mergeCSet(set, getDeclarations(inc.name));
+                        
                     }
+                    
                 }
             }
         }
     }
-    return set;
+    return *set;
 }
 
 

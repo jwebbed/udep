@@ -13,7 +13,6 @@
 		B9A8D4AE192DB5AD00C84F50 /* csearch_include.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4AA192DB5AD00C84F50 /* csearch_include.cpp */; };
 		B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4AB192DB5AD00C84F50 /* csearch_enum_struct.cpp */; };
 		B9A8D4B3192E559E00C84F50 /* c_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4B1192E559E00C84F50 /* c_set.cpp */; };
-		B9A8D4BA192FCA5B00C84F50 /* c_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4B9192FCA5B00C84F50 /* c_map.cpp */; };
 		B9A8D4BC19311C3300C84F50 /* c_header_declarations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		B9A8D4B1192E559E00C84F50 /* c_set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_set.cpp; sourceTree = "<group>"; };
 		B9A8D4B2192E559E00C84F50 /* c_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c_set.h; sourceTree = "<group>"; };
 		B9A8D4B8192FC85000C84F50 /* c_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_map.h; sourceTree = "<group>"; };
-		B9A8D4B9192FCA5B00C84F50 /* c_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_map.cpp; sourceTree = "<group>"; };
 		B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_header_declarations.cpp; path = source/c_header_declarations.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 				B9A8D4B2192E559E00C84F50 /* c_set.h */,
 				B9A8D4B1192E559E00C84F50 /* c_set.cpp */,
 				B9A8D4B8192FC85000C84F50 /* c_map.h */,
-				B9A8D4B9192FCA5B00C84F50 /* c_map.cpp */,
 				B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */,
 			);
 			name = C;
@@ -160,7 +157,6 @@
 			files = (
 				B9A8D4A5192DB45000C84F50 /* main.cpp in Sources */,
 				B9A8D4AD192DB5AD00C84F50 /* csearch_helpers.cpp in Sources */,
-				B9A8D4BA192FCA5B00C84F50 /* c_map.cpp in Sources */,
 				B9A8D4BC19311C3300C84F50 /* c_header_declarations.cpp in Sources */,
 				B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */,
 				B9A8D4AE192DB5AD00C84F50 /* csearch_include.cpp in Sources */,

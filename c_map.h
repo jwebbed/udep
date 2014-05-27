@@ -27,9 +27,6 @@
 #include <string>
 #include "c_set.h"
 
-struct c_map : public std::map<std::string, c_set> {
-public:
-    void printcmap();
-};
+typedef std::map<std::string, c_set> c_map_t;
 
 #endif
