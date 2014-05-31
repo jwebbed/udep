@@ -22,6 +22,10 @@
 
 #include <iostream>
 
+#include "c_set.h"
+#include <string>
+c_set getDeclarations(std::string header);
+
 int main(int argc, const char * argv[])
 {
     FILE* fp;

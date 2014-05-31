@@ -34,7 +34,7 @@
 
 // checks if a header file exists in the input dir,
 // returns 1 if sucessful 0 if not
-int checkHeader(const char* dir, char* header){
+int checkHeader(const char* dir, const char* header){
     char full[strlen(dir) + strlen(header)];
     strcpy(full, dir);
     strcat(full, header);
@@ -45,7 +45,7 @@ int checkHeader(const char* dir, char* header){
  * searches for a header file
  * returns 1 if sucessful 0 if not
  */
-int searchHeader(char* header, FILE** fp){
+int searchHeader(const char* header, FILE** fp){
     if (checkHeader("/usr/local/include/", header)){
         char full[strlen("/usr/local/include/") + strlen(header)];
         strcpy(full, "/usr/local/include/");
@@ -78,7 +78,7 @@ int searchHeader(char* header, FILE** fp){
     }
 }
 
-int getHeader(char** file, char* header){
+int getHeader(char** file, const char* header){
     FILE* fp;
     if (searchHeader(header, &fp)){
         fseek(fp, 0L, SEEK_END);
@@ -99,23 +99,18 @@ int getHeader(char** file, char* header){
 
 c_map_t* header_map = NULL;
 
-c_set getDeclarations(std::string header){
-    const char* c_str = header.c_str();
-    return getDeclarations(c_str);
-}
 
-c_set getDeclarations(char* header){
+c_set getDeclarations(std::string header){
     if (header_map == NULL)
         header_map = new c_map_t();
     
     char* prog;
     c_set * set;
-    if (getHeader(&prog, header)){
+    if (getHeader(&prog, header.c_str())){
         set = new c_set(prog, header);
         
         c_set unique_set(set);
         header_map->insert({unique_set.name, unique_set});
-        
         
         if (set->include_set.size() > 0){
             for (std::string s : set->include_set){
@@ -124,14 +119,20 @@ c_set getDeclarations(char* header){
                     if (header_map->find(str2) != header_map->end()){
                         set->merge((*header_map)[str2]);
                     } else {
-                        
+                        set->merge(getDeclarations(str2));
                     }
                     
                 }
             }
         }
-    }
+    }    
     return *set;
+}
+
+// Should make a define, actually should get rid of all char*
+// uses entirely so I guess it doesn't matter
+c_set getDeclarations(char* header){
+    return getDeclarations(std::string(header));
 }
 
 

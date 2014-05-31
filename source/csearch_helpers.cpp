@@ -21,6 +21,7 @@
  */
 
 #include <iostream>
+#include <string>
 #include <string.h>
 
 #include "csearch.h"
@@ -60,3 +61,9 @@ void stripWhiteSpace(char* buf){
             return;
     }
 }
+
+std::string removeComments(std::string prog){
+    
+    return NULL;
+}
+

@@ -43,6 +43,14 @@ c_set::c_set(char* prog, char* name){
     this->include_set = findIncludes(prog);
 }
 
+c_set::c_set(char * prog, std::string name){
+    this->name = name;
+    this->function_set = findFunctionCalls(prog);
+    this->struct_set = findStructs(prog);
+    this->enum_set = findEnums(prog);
+    this->include_set = findIncludes(prog);
+}
+
 c_set::c_set(c_set *set){
     this->name = set->name;
     this->function_set = std::set<std::string>(set->function_set);
