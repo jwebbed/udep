@@ -14,6 +14,7 @@
 		B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4AB192DB5AD00C84F50 /* csearch_enum_struct.cpp */; };
 		B9A8D4B3192E559E00C84F50 /* c_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4B1192E559E00C84F50 /* c_set.cpp */; };
 		B9A8D4BC19311C3300C84F50 /* c_header_declarations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */; };
+		B9BA3873193A1B5800091270 /* c_checker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9BA3872193A1B5800091270 /* c_checker.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,9 @@
 		B9A8D4B2192E559E00C84F50 /* c_set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c_set.h; sourceTree = "<group>"; };
 		B9A8D4B8192FC85000C84F50 /* c_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_map.h; sourceTree = "<group>"; };
 		B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = c_header_declarations.cpp; path = source/c_header_declarations.cpp; sourceTree = "<group>"; };
+		B9BA3871193A1B1F00091270 /* udep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udep.h; sourceTree = "<group>"; };
+		B9BA3872193A1B5800091270 /* c_checker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_checker.cpp; sourceTree = "<group>"; };
+		B9BA3874193A1B7000091270 /* c_checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A8D4A6192DB58C00C84F50 /* C */,
+				B9BA3871193A1B1F00091270 /* udep.h */,
 				B9A8D4A3192DB45000C84F50 /* main.cpp */,
 				B9A8D4A4192DB45000C84F50 /* udep.1 */,
 			);
@@ -88,6 +93,8 @@
 				B9A8D4B1192E559E00C84F50 /* c_set.cpp */,
 				B9A8D4B8192FC85000C84F50 /* c_map.h */,
 				B9A8D4BB19311C3300C84F50 /* c_header_declarations.cpp */,
+				B9BA3874193A1B7000091270 /* c_checker.h */,
+				B9BA3872193A1B5800091270 /* c_checker.cpp */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 				B9A8D4A5192DB45000C84F50 /* main.cpp in Sources */,
 				B9A8D4AD192DB5AD00C84F50 /* csearch_helpers.cpp in Sources */,
 				B9A8D4BC19311C3300C84F50 /* c_header_declarations.cpp in Sources */,
+				B9BA3873193A1B5800091270 /* c_checker.cpp in Sources */,
 				B9A8D4AF192DB5AD00C84F50 /* csearch_enum_struct.cpp in Sources */,
 				B9A8D4AE192DB5AD00C84F50 /* csearch_include.cpp in Sources */,
 				B9A8D4B3192E559E00C84F50 /* c_set.cpp in Sources */,
