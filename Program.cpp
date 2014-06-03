@@ -20,12 +20,4 @@
  THE SOFTWARE.
  */
 
-#include "c_checker.h"
 
-void check_c(std::string prog){
-    
-}
-
-void check_c(char * prog){
-    check_c(std::string(prog));
-}

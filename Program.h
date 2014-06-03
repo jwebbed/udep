@@ -20,12 +20,24 @@
  THE SOFTWARE.
  */
 
-#include "c_checker.h"
+#ifndef udep_program_h
+#define udep_program_h
 
-void check_c(std::string prog){
+#include <string>
+
+typedef enum {
+    c
+} language_t;
+
+class Program{
+public:
+    Program (char * prog);
+    Program (std::string prog);
+    void setLanguage(
     
-}
+};
 
-void check_c(char * prog){
-    check_c(std::string(prog));
-}
+
+
+
+#endif
