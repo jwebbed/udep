@@ -21,6 +21,9 @@
  */
 
 #include <iostream>
+#include <string>
+#include "udep.h"
+#include "program.h"
 
 int main(int argc, const char * argv[])
 {
@@ -48,6 +51,9 @@ int main(int argc, const char * argv[])
         perror("fread");
         exit(1);
     }
+    
+    Program prog = Program(std::string(program), c);
+    prog.checkProg();
 
     return 0;
 }

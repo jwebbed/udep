@@ -23,9 +23,12 @@
 #include "c_checker.h"
 
 void check_c(std::string prog){
+    c_set set = c_set((char*)prog.c_str());
     
+    for (auto i : set.include_set){
+        if (i[0] == '<'){
+            getDeclarations(i.substr(1, (i.length() - 2))).printSet();
+        }
+    }
 }
 
-void check_c(char * prog){
-    check_c(std::string(prog));
-}

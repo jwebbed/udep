@@ -65,3 +65,34 @@ void c_set::merge(c_set set){
     this->enum_set.insert(set.enum_set.begin(), set.enum_set.end());
     this->include_set.insert(set.include_set.begin(), set.include_set.end());
 }
+
+void c_set::printSet(){
+    std::cout << "function set\n";
+    std::cout << "------------\n";
+    for (auto i : this->function_set){
+        std::cout << i << '\n';
+    }
+    
+    std::cout << '\n';
+    std::cout << "struct set\n";
+    std::cout << "------------\n";
+    for (auto i : this->struct_set){
+        std::cout << i << '\n';
+    }
+    
+    std::cout << '\n';
+    std::cout << "enum set\n";
+    std::cout << "------------\n";
+    for (auto i : this->enum_set){
+        std::cout << i << '\n';
+    }
+    
+    std::cout << '\n';
+    std::cout << "include set\n";
+    std::cout << "------------\n";
+    for (auto i : this->include_set){
+        std::cout << i << '\n';
+    }
+    
+    
+}

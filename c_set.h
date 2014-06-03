@@ -39,6 +39,7 @@ public:
     c_set (char * prog, std::string name);
     c_set (c_set *set);
     void merge(c_set set);
+    void printSet();
 };
 
 #endif /* defined(__udep__c_set__) */
