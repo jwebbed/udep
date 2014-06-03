@@ -23,6 +23,6 @@
 #ifndef udep_udep_h
 #define udep_udep_h
 
-
+void check_c(std::string prog);
 
 #endif

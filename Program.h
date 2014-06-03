@@ -26,14 +26,19 @@
 #include <string>
 
 typedef enum {
-    c
+    c,
+    python // Will add support at some point
 } language_t;
 
 class Program{
 public:
-    Program (char * prog);
     Program (std::string prog);
-    void setLanguage(
+    Program (std::string prog, language_t lang);
+    void setLanguage(language_t lang);
+    void checkProg();
+private:
+    language_t lang;
+    std::string prog;
     
 };
 

@@ -20,4 +20,28 @@
  THE SOFTWARE.
  */
 
+#include "Program.h"
+#include "udep.h"
 
+Program::Program(std::string prog){
+    this->prog = prog;
+}
+
+Program::Program(std::string prog, language_t lang){
+    this->prog = prog;
+    this->lang = lang;
+}
+
+void Program::setLanguage(language_t lang){
+    this->lang = lang;
+}
+
+void Program::checkProg(){
+    switch (this->lang){
+        case c:
+            check_c(this->prog);
+            break;
+        case python:
+            break;
+    }
+}
