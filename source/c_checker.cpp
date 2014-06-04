@@ -20,28 +20,19 @@
  THE SOFTWARE.
  */
 
+#include "c_checker.h"
 #include "Program.h"
-#include "udep.h"
 
-Program::Program(std::string prog){
-    this->prog = prog;
-}
-
-Program::Program(std::string prog, language_t lang){
-    this->prog = prog;
-    this->lang = lang;
-}
-
-void Program::setLanguage(language_t lang){
-    this->lang = lang;
-}
-
-void Program::checkProg(){
-    switch (this->lang){
-        case c:
-            check_c(this->prog);
-            break;
-        case python:
-            break;
+void Program::check_c(){
+    c_set set = c_set((char*)this->prog.c_str());
+    set.printSet();
+    
+    /* Does not work currently on OSx 10.10 because they moved the standard library for some reason...
+    for (auto i : set.include_set){
+        if (i[0] == '<'){
+            getDeclarations(i.substr(1, (i.length() - 2))).printSet();
+        }
     }
+    */
 }
+

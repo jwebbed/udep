@@ -20,29 +20,27 @@
  THE SOFTWARE.
  */
 
-#ifndef udep_program_h
-#define udep_program_h
+#include "Program.h"
 
-#include <string>
+Program::Program(std::string prog){
+    this->prog = prog;
+}
 
-typedef enum {
-    c,
-    python // Will add support at some point
-} language_t;
+Program::Program(std::string prog, language_t lang){
+    this->prog = prog;
+    this->lang = lang;
+}
 
-class Program{
-public:
-    Program (std::string prog);
-    Program (std::string prog, language_t lang);
-    void setLanguage(language_t lang);
-    void checkProg();
-private:
-    language_t lang;
-    std::string prog;
-    
-};
+void Program::setLanguage(language_t lang){
+    this->lang = lang;
+}
 
-
-
-
-#endif
+void Program::checkProg(){
+    switch (this->lang){
+        case c:
+            this->check_c();
+            break;
+        case python:
+            break;
+    }
+}

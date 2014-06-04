@@ -20,14 +20,12 @@
  THE SOFTWARE.
  */
 
-#include <stdbool.h>
-#include "sets/sets.h"
+#ifndef udep_c_checker_h
+#define udep_c_checker_h
 
-// c_map declarations
-typedef struct set c_map;
-extern c_map* header_map;
-#define initCMap() initSet()
-void appendCSet(c_map *map, c_set *set);
-c_set * getCSet(c_map *map, char* name);
-void freeCMap(c_map* map);
-c_set* mergeCMapToCSet(c_map* map);
+#include "c_set.h"
+#include "c_map.h"
+c_set getDeclarations(std::string header);
+
+
+#endif

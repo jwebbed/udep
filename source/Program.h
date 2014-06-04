@@ -18,37 +18,32 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
-*/
+ */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#ifndef udep_program_h
+#define udep_program_h
 
-#include "c_checker.h"
+#include <string>
 
+typedef enum {
+    c,
+    python // Will add support at some point
+} language_t;
 
-
-void check_c(char* prog){
-    c_set* set = buildCSet(prog);
-    struct set_node* n;
-    include inc;
+class Program{
+public:
+    Program (std::string prog);
+    Program (std::string prog, language_t lang);
+    void setLanguage(language_t lang);
+    void checkProg();
+private:
+    language_t lang;
+    std::string prog;
+    void check_c();
     
-    for (n = set->include_set->head; n != NULL; n = n->next){
-        inc = includeInit(n->data);
-        if (inc.type == global)
-            getDeclarations(inc.name);
-    }
-    
-    /*
-    for (n = header_map->head; n != NULL; n = n->next){
-        printf("%s\n", n->data);
-        printf("---------\n");
-        printSet(((c_set*)n->meta)->function_set);
-        printf("\n");
-    }
-     */
+};
 
-    freeCSet(set);
-    freeCMap(header_map);
-}
 
+
+
+#endif
