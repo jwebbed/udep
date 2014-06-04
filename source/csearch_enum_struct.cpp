@@ -24,7 +24,6 @@
 #include <string.h>
 
 #include "csearch.h"
-
 using namespace std;
 
 enum _struct {
@@ -34,18 +33,18 @@ enum _struct {
     _typedef
 };
 
-set<string> findEnumStructs(char* prog, const char* es){
+set<string> findEnumStructs(string prog, const string es){
     set<string> set;
-    char buf[BUF_SIZE];
+    string buf;
     
-    size_t s_len = strlen(es);
+    size_t s_len = es.length();
     
     enum _struct state = initial;
     enum comment comment = none;
     int depth = 0;
     int whitespace = 0;
     
-    size_t len = strlen(prog);
+    size_t len = prog.length();
     int k = 0;
     int start = 0;
     for (char ch = prog[k]; k < len; ch = prog[++k]){
@@ -75,7 +74,7 @@ set<string> findEnumStructs(char* prog, const char* es){
             continue;
         }
         
-        if (state == initial && (strncmp(prog + k, es, s_len) == 0)){
+        if (state == initial && (prog.substr(k, es.length()) == es)){
             k+= s_len - 1;
             state = _space;
         } else if (state == _space){
@@ -103,9 +102,8 @@ set<string> findEnumStructs(char* prog, const char* es){
                 continue;
             }
         } else if (state == enum_struct && !validIndentifierChar(ch)){
-            strncpy(buf, prog + start, k - start);
-            buf[k - start] = '\0';
-            set.insert(string(buf));
+            buf = prog.substr(start, k - start);
+            set.insert(buf);
             state = initial;
         }
     }

@@ -53,17 +53,3 @@ bool isAlphanumeric(char c){
     return false;
 }
 
-void stripWhiteSpace(char* buf){
-    for (int i = (int)strlen(buf); i >= 0; i--){
-        if (buf[i] == ' ' || buf[i] == '\0')
-            buf[i] = '\0';
-        else
-            return;
-    }
-}
-
-std::string removeComments(std::string prog){
-    
-    return NULL;
-}
-

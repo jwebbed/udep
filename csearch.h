@@ -24,13 +24,14 @@
 #define udep_csearch_h
 
 #include <set>
+#include <string>
 
-std::set<std::string> _findFunctionCalls(char * prog, int header);
+std::set<std::string> _findFunctionCalls(std::string prog, int header);
 #define findFunctionCalls(prog) _findFunctionCalls((prog), 0)
 #define findFunctionDeclarations(prog) _findFunctionCalls((prog), 1)
 
 std::set<std::string> findIncludes(char * prog);
-std::set<std::string> findEnumStructs(char* prog, const char* es);
+std::set<std::string> findEnumStructs(std::string prog, const std::string es);
 #define findStructs(prog) findEnumStructs((prog), "struct")
 #define findEnums(prog) findEnumStructs((prog), "enum")
 
@@ -42,7 +43,6 @@ std::set<std::string> findEnumStructs(char* prog, const char* es);
 bool isUpperCase(char c);
 bool isLowerCase(char c);
 bool isAlphanumeric(char c);
-void stripWhiteSpace(char* buf);
 
 enum comment {
     none,

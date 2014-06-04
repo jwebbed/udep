@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "source/csearch_enum_struct.cpp"
-            timestampString = "422426335.178332"
+            timestampString = "423591161.322861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "findEnumStructs(char* prog, const char* es)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "findEnumStructs(string prog, const string es)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "source/csearch_func.cpp"
-            timestampString = "422466139.666203"
+            timestampString = "423591558.821063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "_findFunctionCalls(char * prog, int header)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "_findFunctionCalls(string prog, int header)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "csearch.h"
-            timestampString = "422562318.811085"
+            timestampString = "423591161.322861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32">
+            startingLineNumber = "33"
+            endingLineNumber = "33">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,12 +56,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "source/csearch_func.cpp"
-            timestampString = "422466139.666203"
+            timestampString = "423591558.821063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "_findFunctionCalls(char * prog, int header)"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "_findFunctionCalls(string prog, int header)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -146,15 +146,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "c_checker.cpp"
-            timestampString = "423502496.094109"
+            timestampString = "423591161.322861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "check_c(std::string prog)"
             landmarkType = "7">
          </BreakpointContent>
@@ -188,6 +188,38 @@
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "getDeclarations(std::string header)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "c_checker.cpp"
+            timestampString = "423591171.899888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "check_c(std::string prog)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "source/csearch_func.cpp"
+            timestampString = "423591531.927812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "isKeyword(string buf)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

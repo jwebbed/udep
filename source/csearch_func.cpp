@@ -36,27 +36,25 @@ enum func {
     declaration
 };
 
-const char* keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
+const string keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
 
-bool isKeyword(char* buf){
-    const char* word;
-    int i = 0;
-    for (word = keywords[i]; i < 6; word = keywords[++i]){
-        if (strcmp(buf, word) == 0)
+bool isKeyword(string buf){
+    for (const string word : keywords){
+        if (buf.compare(word) == 1)
             return true;
     }
     return false;
 }
 
-set<string> _findFunctionCalls(char * prog, int header){
+set<string> _findFunctionCalls(string prog, int header){
     set<string> set;
-    char buf[BUF_SIZE];
+    string buf;
     
     enum func state = init;
     enum comment comment = none;
     int depth = 0;
     
-    size_t len = strlen(prog);
+    size_t len = prog.length();
     int k = 0;
     int start = 0;
     for (char ch = prog[k]; k < len; ch = prog[++k]){
@@ -110,9 +108,8 @@ set<string> _findFunctionCalls(char * prog, int header){
             }
         } else if (state == left_bracket){
             if (header || depth){
-                strncpy(buf, prog + start, k - start - 1);
+                buf = prog.substr(start, k - start);
                 buf[k - start - 1] = '\0';
-                stripWhiteSpace(buf);
                 if (!isKeyword(buf))
                     set.insert(string(buf));
             }
