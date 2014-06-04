@@ -43,6 +43,7 @@ std::set<std::string> findEnumStructs(std::string prog, const std::string es);
 bool isUpperCase(char c);
 bool isLowerCase(char c);
 bool isAlphanumeric(char c);
+std::string trimTrailingWhitespace(std::string str);
 
 enum comment {
     none,

@@ -40,7 +40,7 @@ const string keywords[] = { "while", "for", "sizeof", "if", "else", "switch" };
 
 bool isKeyword(string buf){
     for (const string word : keywords){
-        if (buf.compare(word) == 1)
+        if (buf.compare(word) == 0)
             return true;
     }
     return false;
@@ -108,7 +108,7 @@ set<string> _findFunctionCalls(string prog, int header){
             }
         } else if (state == left_bracket){
             if (header || depth){
-                buf = prog.substr(start, k - start);
+                buf = trimTrailingWhitespace(prog.substr(start, k - start - 1));
                 if (!isKeyword(buf))
                     set.insert(buf);
             }

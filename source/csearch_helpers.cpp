@@ -53,3 +53,13 @@ bool isAlphanumeric(char c){
     return false;
 }
 
+string trimTrailingWhitespace(string str){
+    int i = 0;
+    for (char c : str){
+        if (c == ' ')
+            return str.substr(0, i);
+        else
+            i++;
+    }
+    return str.substr(0, i);
+}
