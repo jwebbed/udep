@@ -109,9 +109,8 @@ set<string> _findFunctionCalls(string prog, int header){
         } else if (state == left_bracket){
             if (header || depth){
                 buf = prog.substr(start, k - start);
-                buf[k - start - 1] = '\0';
                 if (!isKeyword(buf))
-                    set.insert(string(buf));
+                    set.insert(buf);
             }
             state = init;
             goto init;

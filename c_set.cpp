@@ -29,25 +29,33 @@ c_set::c_set(){
 }
 
 c_set::c_set(char* prog){
-    this->function_set = findFunctionCalls(prog);
+    this->function_set = findFunctionCalls(std::string(prog));
     this->struct_set = findStructs(std::string(prog));
     this->enum_set = findEnums(std::string(prog));
-    this->include_set = findIncludes(prog);
+    this->include_set = findIncludes(std::string(prog));
 }
 
 c_set::c_set(char* prog, char* name){
     this->name = std::string(name);
-    this->function_set = findFunctionCalls(prog);
-    this->struct_set = findStructs(prog);
-    this->enum_set = findEnums(prog);
-    this->include_set = findIncludes(prog);
+    this->function_set = findFunctionCalls(std::string(prog));
+    this->struct_set = findStructs(std::string(prog));
+    this->enum_set = findEnums(std::string(prog));
+    this->include_set = findIncludes(std::string(prog));
 }
 
 c_set::c_set(char * prog, std::string name){
     this->name = name;
-    this->function_set = findFunctionCalls(prog);
+    this->function_set = findFunctionCalls(std::string(prog));
     this->struct_set = findStructs(std::string(prog));
     this->enum_set = findEnums(std::string(prog));
+    this->include_set = findIncludes(std::string(prog));
+}
+
+c_set::c_set(std::string prog, std::string name){
+    this->name = name;
+    this->function_set = findFunctionCalls(prog);
+    this->struct_set = findStructs(prog);
+    this->enum_set = findEnums(prog);
     this->include_set = findIncludes(prog);
 }
 

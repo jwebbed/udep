@@ -47,12 +47,12 @@ enum include {
 /* I seriously couldnt be bothered with posix regex so I just used a DFA
  it's probably more efficient tbh as i'm 90% sure it uses a DFA anyways,
  this allows me to optimize for the specific situation and skip characters */
-set<string> findIncludes(char * prog){
+set<string> findIncludes(string prog){
     set<string> set;
-    char buf[BUF_SIZE];
+    string buf;
     
     enum include state = nope;
-    size_t len = strlen(prog);
+    size_t len = prog.length();
     int k = 0;
     int start = 0;
     for (char ch = prog[k]; k < len; ch = prog[++k]){
@@ -91,9 +91,9 @@ set<string> findIncludes(char * prog){
             if (ch == '>') {
                 state = nope;
                 //printf("%.*s\n", k - start + 1, prog + start);
-                strncpy(buf, prog + start + 9, k - start - 8);
-                buf[k - start - 8] = '\0';
-                set.insert(string(buf));
+                //strncpy(buf, prog + start + 9, k - start - 8);
+                buf = prog.substr(start + 9, k - start - 8);
+                set.insert(buf);
             } else {
                 state = fail;
             }
