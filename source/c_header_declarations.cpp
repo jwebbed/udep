@@ -30,6 +30,7 @@
 
 #include "c_map.h"
 #include "c_set.h"
+#include "csearch.h"
 
 
 // checks if a header file exists in the input dir,
@@ -107,7 +108,12 @@ c_set getDeclarations(std::string header){
     char* prog;
     c_set * set;
     if (getHeader(&prog, header.c_str())){
-        set = new c_set(prog, header);
+        set = new c_set();
+        set->name = header;
+        set->function_set = findFunctionDeclarations(prog);
+        set->struct_set = findStructs(prog);
+        set->enum_set = findEnums(prog);
+        set->include_set = findIncludes(prog);
         
         c_set unique_set(set);
         header_map->insert({unique_set.name, unique_set});
