@@ -136,12 +136,3 @@ c_set getDeclarations(std::string header){
     return *set;
 }
 
-// Should make a define, actually should get rid of all char*
-// uses entirely so I guess it doesn't matter
-c_set getDeclarations(char* header){
-    return getDeclarations(std::string(header));
-}
-
-
-
-

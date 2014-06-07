@@ -25,6 +25,23 @@
 #include "udep.h"
 #include "program.h"
 
+language_t determineLangauge(std::string filename){
+    unsigned long len = filename.length();
+    for (unsigned long i = len - 1; i > 0; i--){
+        if (filename[i] == '.'){
+            std::string ext = filename.substr(i + 1, len - i - 1);
+            if (ext == "c")
+                return c;
+            else if (ext == "py")
+                return python;
+            else
+                break;
+        }
+    }
+    printf("Cannot determine language, either langauge not implemented or extension unrecognized, please include program type in program arguments (NYI)");
+    exit(1);
+}
+
 int main(int argc, const char * argv[])
 {
     FILE* fp;
@@ -35,11 +52,9 @@ int main(int argc, const char * argv[])
             exit(1);
         }
     } else {
-        fprintf(stderr, "Usage: udep <filename>.c\n");
+        fprintf(stderr, "Usage: udep <filename>\n");
         exit(1);
     }
-    
-    
     
     fseek(fp, 0L, SEEK_END);
     long sz = ftell(fp);
@@ -52,7 +67,7 @@ int main(int argc, const char * argv[])
         exit(1);
     }
     
-    Program prog = Program(std::string(program), c);
+    Program prog = Program(std::string(program), determineLangauge(std::string(argv[1])));
     prog.checkProg();
 
     return 0;
