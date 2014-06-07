@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91D13311943ACAE00668EE4 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B91D13301943ACAE00668EE4 /* helpers.cpp */; };
 		B9A50607193F8E8A00FEB91B /* c_checker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A505F8193F8E8A00FEB91B /* c_checker.cpp */; };
 		B9A50608193F8E8A00FEB91B /* c_header_declarations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A505FA193F8E8A00FEB91B /* c_header_declarations.cpp */; };
 		B9A50609193F8E8A00FEB91B /* c_set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B9A505FC193F8E8A00FEB91B /* c_set.cpp */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B91D13301943ACAE00668EE4 /* helpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
+		B91D13321943ACBE00668EE4 /* helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		B9A505F8193F8E8A00FEB91B /* c_checker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_checker.cpp; sourceTree = "<group>"; };
 		B9A505F9193F8E8A00FEB91B /* c_checker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c_checker.h; sourceTree = "<group>"; };
 		B9A505FA193F8E8A00FEB91B /* c_header_declarations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_header_declarations.cpp; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				B9A50611193F8E9600FEB91B /* Program */,
 				B9A50610193F8E9100FEB91B /* C */,
 				B9A50603193F8E8A00FEB91B /* main.cpp */,
+				B91D13321943ACBE00668EE4 /* helpers.h */,
+				B91D13301943ACAE00668EE4 /* helpers.cpp */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				B9A50609193F8E8A00FEB91B /* c_set.cpp in Sources */,
 				B9A5060F193F8E8A00FEB91B /* Program.cpp in Sources */,
 				B9A50608193F8E8A00FEB91B /* c_header_declarations.cpp in Sources */,
+				B91D13311943ACAE00668EE4 /* helpers.cpp in Sources */,
 				B9A5060B193F8E8A00FEB91B /* csearch_func.cpp in Sources */,
 				B9A5060C193F8E8A00FEB91B /* csearch_helpers.cpp in Sources */,
 				B9A5060E193F8E8A00FEB91B /* main.cpp in Sources */,

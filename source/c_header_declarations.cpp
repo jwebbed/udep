@@ -116,7 +116,6 @@ c_set getDeclarations(std::string header){
         set->include_set = findIncludes(prog);
         
         c_set unique_set(set);
-        //header_map->insert({unique_set.name, unique_set});
         (*header_map)[unique_set.name] = unique_set;
         
         if (set->include_set.size() > 0){
