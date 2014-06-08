@@ -28,16 +28,19 @@
 
 void Program::check_c(){
     c_set set = c_set((char*)this->prog.c_str());
-    //set.printSet();
     
+    std::set<std::string> allset, usedset;
+    std::map<std::string, c_set> header_map;
+    std::string name;
     for (auto i : set.include_set){
         if (i[0] == '<'){
-            getDeclarations(i.substr(1, (i.length() - 2)));
+            name = i.substr(1, (i.length() - 2));
+            header_map[name] = getDeclarations(name);
         }
     }
     
     std::map<std::string, std::set<std::string>> fmap;
-    for (auto node : *header_map){
+    for (auto node : header_map){
         fmap[node.first] = node.second.function_set;
     }
     
