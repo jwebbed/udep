@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CF26E56B-006C-40C0-A363-5CF737435003</string>
+	<string>8E1613AD-5555-47FB-8B2C-EB11AB77BF6C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>udep</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>ssh://github.com/jwebbed/udep.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>udep/udep.xcodeproj/project.xcworkspace</string>
+	<string>udep.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FBE5B885-F7FF-4424-AAA3-27C704236D63</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/jwebbed/udep.git</string>

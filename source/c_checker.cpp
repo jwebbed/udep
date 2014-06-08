@@ -27,12 +27,10 @@ void Program::check_c(){
     c_set set = c_set((char*)this->prog.c_str());
     set.printSet();
     
-    /* Does not work currently on OSx 10.10 because they moved the standard library for some reason...
     for (auto i : set.include_set){
         if (i[0] == '<'){
             getDeclarations(i.substr(1, (i.length() - 2))).printSet();
         }
     }
-    */
 }
 

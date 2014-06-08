@@ -106,32 +106,33 @@ c_set getDeclarations(std::string header){
         header_map = new c_map_t();
     
     char* prog;
-    c_set * set;
+    c_set set;
     if (getHeader(&prog, header.c_str())){
         set = new c_set();
-        set->name = header;
-        set->function_set = findFunctionDeclarations(prog);
-        set->struct_set = findStructs(prog);
-        set->enum_set = findEnums(prog);
-        set->include_set = findIncludes(prog);
+        set.name = header;
+        std::string strprog = std::string(prog);
+        set.function_set = findFunctionDeclarations(strprog);
+        set.struct_set = findStructs(strprog);
+        set.enum_set = findEnums(strprog);
+        set.include_set = findIncludes(strprog);
         
         c_set unique_set(set);
         (*header_map)[unique_set.name] = unique_set;
         
-        if (set->include_set.size() > 0){
-            for (std::string s : set->include_set){
+        if (set.include_set.size() > 0){
+            for (std::string s : unique_set.include_set){
                 if (s[0] == '<'){
                     std::string str2 = s.substr(1, (s.length() - 2));
                     if (header_map->find(str2) != header_map->end()){
-                        set->merge((*header_map)[str2]);
+                        set.merge((*header_map)[str2]);
                     } else {
-                        set->merge(getDeclarations(str2));
+                        set.merge(getDeclarations(str2));
                     }
                     
                 }
             }
         }
     }    
-    return *set;
+    return set;
 }
 
