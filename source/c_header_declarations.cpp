@@ -100,7 +100,6 @@ int getHeader(char** file, const char* header){
 
 c_map_t* header_map = NULL;
 
-
 c_set getDeclarations(std::string header){
     if (header_map == NULL)
         header_map = new c_map_t();

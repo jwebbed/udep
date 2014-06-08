@@ -20,8 +20,11 @@
  THE SOFTWARE.
  */
 
+#include <map>
+
 #include "c_checker.h"
 #include "Program.h"
+#include "helpers.h"
 
 void Program::check_c(){
     c_set set = c_set((char*)this->prog.c_str());
@@ -32,5 +35,12 @@ void Program::check_c(){
             getDeclarations(i.substr(1, (i.length() - 2))).printSet();
         }
     }
+    
+    std::map<std::string, std::set<std::string>> fmap;
+    for (auto node : *header_map){
+        fmap[node.first] = node.second.function_set;
+    }
+    
+    minSubset(set.function_set, fmap);
 }
 

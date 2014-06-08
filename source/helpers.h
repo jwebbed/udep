@@ -23,7 +23,10 @@
 #ifndef udep_helpers_h
 #define udep_helpers_h
 
+#include <set>
+#include <map>
+#include <string>
 
-
+std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string, std::set<std::string>> imap);
 
 #endif
