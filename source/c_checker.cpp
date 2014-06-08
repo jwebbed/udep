@@ -28,11 +28,11 @@
 
 void Program::check_c(){
     c_set set = c_set((char*)this->prog.c_str());
-    set.printSet();
+    //set.printSet();
     
     for (auto i : set.include_set){
         if (i[0] == '<'){
-            getDeclarations(i.substr(1, (i.length() - 2))).printSet();
+            getDeclarations(i.substr(1, (i.length() - 2)));
         }
     }
     

@@ -26,7 +26,6 @@
 #include "c_set.h"
 #include "c_map.h"
 c_set getDeclarations(std::string header);
-extern c_map_t* header_map;
 
 
 #endif

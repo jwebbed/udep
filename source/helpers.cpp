@@ -20,6 +20,7 @@
  THE SOFTWARE.
  */
 
+#include <iostream>
 #include "helpers.h"
 
 /*
@@ -49,22 +50,29 @@
 */
 
 std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string, std::set<std::string>> imap){
+    std::set<std::string> reqs;
+    bool needed;
     for (auto top = imap.begin(); top != imap.end(); top++) {
         // iterator->first = key
         // iterator->second = value
         // Repeat if you also want to iterate through the second map.
-        auto next = top;
-        next++;
-        for(auto node = next; node != imap.end(); node++){
-            for (std::string str : top->second){
-                if (node->second.find(str) != node->second.end()){
-                    node->second.erase(str);
+        needed = false;
+        for (auto node : top->second){
+            if (iset.find(node) != iset.end()){
+                std::cout << node << "\n";
+                iset.erase(node);
+                if (!needed){
+                    reqs.insert(top->first);
+                    needed = true;
                 }
             }
         }
     }
     
-    // so it will compile
-    return iset;
+    return reqs;
 
 }
+
+
+
+
