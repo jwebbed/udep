@@ -39,9 +39,11 @@ void Program::check_c(){
         }
     }
     
-    std::map<std::string, std::set<std::string>> fmap;
+    std::map<std::string, std::set<std::string>> fmap, emap, smap;
     for (auto node : header_map){
         fmap[node.first] = node.second.function_set;
+        emap[node.first] = node.second.enum_set;
+        smap[node.first] = node.second.struct_set;
     }
     
     minSubset(set.function_set, fmap);
