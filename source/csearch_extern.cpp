@@ -20,37 +20,11 @@
  THE SOFTWARE.
  */
 
-#ifndef udep_csearch_h
-#define udep_csearch_h
+#include "csearch.h"
 
-#include <set>
-#include <string>
+using namespace std;
 
-std::set<std::string> _findFunctionCalls(std::string prog, int header);
-#define findFunctionCalls(prog) _findFunctionCalls((prog), 0)
-#define findFunctionDeclarations(prog) _findFunctionCalls((prog), 1)
+set<string> findExterns(string prog){
 
-std::set<std::string> findExterns(std::string prog);
-std::set<std::string> findIncludes(std::string prog);
-std::set<std::string> findEnumStructs(std::string prog, const std::string es);
-#define findStructs(prog) findEnumStructs((prog), "struct")
-#define findEnums(prog) findEnumStructs((prog), "enum")
-
-#define isAlphabetic(c) (isLowerCase(c) || isUpperCase(c))
-#define validInitialIndentifierChar(c) (isAlphabetic((c)) || (c) == '_')
-#define validIndentifierChar(c) (isAlphanumeric(c) || (c) == '_')
-#define BUF_SIZE 100
-
-bool isUpperCase(char c);
-bool isLowerCase(char c);
-bool isAlphanumeric(char c);
-std::string trimTrailingWhitespace(std::string str);
-
-enum comment {
-    none,
-    potential,
-    block,
-    line
-};
-
-#endif
+    return set<string>();
+}

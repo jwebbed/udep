@@ -21,7 +21,6 @@
  */
 
 #include <iostream>
-#include <string.h>
 
 #include "csearch.h"
 using namespace std;

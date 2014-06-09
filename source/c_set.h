@@ -33,6 +33,7 @@ public:
     std::set<std::string> struct_set;
     std::set<std::string> enum_set;
     std::set<std::string> include_set;
+    std::set<std::string> extern_set;
     c_set ();
     c_set (char * prog);
     c_set (char * prog, char * name);

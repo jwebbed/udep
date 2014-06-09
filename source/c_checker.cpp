@@ -64,7 +64,7 @@ void Program::check_c(){
     
     nset = uniqueSubset(allset, mset);
     
-    std::cout << '\n' << "unused headers" << '\n' << "-------------" << '\n';
+    std::cout << "unused headers" << '\n' << "-------------" << '\n';
     for (auto c : nset){
         std::cout << c << '\n';
     }
