@@ -45,6 +45,8 @@ void Program::check_c(){
         }
     }
     
+    delete total_header_map;
+    
     std::map<std::string, std::set<std::string>> fmap, emap, smap;
     for (auto node : header_map){
         fmap[node.first] = node.second.function_set;
@@ -62,7 +64,7 @@ void Program::check_c(){
     
     nset = uniqueSubset(allset, mset);
     
-    std::cout << '\n';
+    std::cout << '\n' << "unused headers" << '\n' << "-------------" << '\n';
     for (auto c : nset){
         std::cout << c << '\n';
     }

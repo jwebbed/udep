@@ -98,11 +98,11 @@ int getHeader(char** file, const char* header){
     }
 }
 
-c_map_t* header_map = NULL;
+c_map_t* total_header_map = NULL;
 
 c_set getDeclarations(std::string header){
-    if (header_map == NULL)
-        header_map = new c_map_t();
+    if (total_header_map == NULL)
+        total_header_map = new c_map_t();
     
     char* prog;
     c_set set;
@@ -116,14 +116,14 @@ c_set getDeclarations(std::string header){
         set.include_set = findIncludes(strprog);
         
         c_set unique_set(set);
-        (*header_map)[unique_set.name] = unique_set;
+        (*total_header_map)[unique_set.name] = unique_set;
         
         if (set.include_set.size() > 0){
             for (std::string s : unique_set.include_set){
                 if (s[0] == '<'){
                     std::string str2 = s.substr(1, (s.length() - 2));
-                    if (header_map->find(str2) != header_map->end()){
-                        set.merge((*header_map)[str2]);
+                    if (total_header_map->find(str2) != total_header_map->end()){
+                        set.merge((*total_header_map)[str2]);
                     } else {
                         set.merge(getDeclarations(str2));
                     }
