@@ -38,28 +38,15 @@
  The minimal set of sets needed from the input map of sets that could be used to construct teh
  first set
  
- Algorithm:
- 1. Loop over all sets in the map of sets
-    a. Loop over elements inside set
-        i. remove any instance of element from other sets
-        ii. check if element is inside input set, if yes, mark this set as needed and skip this step in the future
- 2. Find key of all the sets marked as needed and add them to a set
- 3. Return aforementioned set
-
-
 */
 
 std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string, std::set<std::string>> imap){
     std::set<std::string> reqs;
     bool needed;
     for (auto top = imap.begin(); top != imap.end(); top++) {
-        // iterator->first = key
-        // iterator->second = value
-        // Repeat if you also want to iterate through the second map.
         needed = false;
         for (auto node : top->second){
             if (iset.find(node) != iset.end()){
-                std::cout << node << "\n";
                 iset.erase(node);
                 if (!needed){
                     reqs.insert(top->first);

@@ -21,6 +21,7 @@
  */
 
 #include "Program.h"
+#include <iostream>
 
 Program::Program(std::string prog){
     this->prog = prog;
@@ -41,6 +42,7 @@ void Program::checkProg(){
             this->check_c();
             break;
         case python:
+            std::cout << "Python is currently NYI";
             break;
     }
 }
