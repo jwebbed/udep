@@ -20,11 +20,18 @@
  THE SOFTWARE.
  */
 
+#include <string>
+
 #include "csearch.h"
 
 using namespace std;
 
 set<string> findExterns(string prog){
-
-    return set<string>();
+    set<string> rset;
+    size_t index = prog.find("extern");
+    while (index != string::npos){
+        // I'm taking a break
+    }
+    
+    return rset;
 }
