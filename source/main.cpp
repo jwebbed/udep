@@ -23,7 +23,7 @@
 #include <iostream>
 #include <string>
 #include "udep.h"
-#include "program.h"
+#include "Program.h"
 
 language_t determineLangauge(std::string filename){
     unsigned long len = filename.length();

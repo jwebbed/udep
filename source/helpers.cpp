@@ -35,9 +35,8 @@
  in the first set at least once
  
  Output:
- The minimal set of sets needed from the input map of sets that could be used to construct teh
+ The minimal set of sets needed from the input map of sets that could be used to construct the
  first set
- 
 */
 
 std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string, std::set<std::string>> imap){
