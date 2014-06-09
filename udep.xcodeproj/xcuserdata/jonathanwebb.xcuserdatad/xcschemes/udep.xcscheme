@@ -60,6 +60,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "packetize.c"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "server.c"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

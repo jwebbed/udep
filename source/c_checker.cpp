@@ -21,6 +21,7 @@
  */
 
 #include <map>
+#include <iostream>
 
 #include "c_checker.h"
 #include "Program.h"
@@ -28,14 +29,19 @@
 
 void Program::check_c(){
     c_set set = c_set((char*)this->prog.c_str());
+    /*
+    set.printSet();
+    std::cout << '\n';
+     */
     
-    std::set<std::string> allset, usedset;
+    std::set<std::string> allset, usedset, mset, fset, eset, sset, nset;
     std::map<std::string, c_set> header_map;
     std::string name;
     for (auto i : set.include_set){
         if (i[0] == '<'){
             name = i.substr(1, (i.length() - 2));
             header_map[name] = getDeclarations(name);
+            allset.insert(name);
         }
     }
     
@@ -46,6 +52,19 @@ void Program::check_c(){
         smap[node.first] = node.second.struct_set;
     }
     
-    minSubset(set.function_set, fmap);
+    fset = minSubset(set.function_set, fmap);
+    eset = minSubset(set.enum_set, emap);
+    sset = minSubset(set.struct_set, smap);
+    
+    mset.insert(fset.begin(), fset.end());
+    mset.insert(eset.begin(), eset.end());
+    mset.insert(sset.begin(), sset.end());
+    
+    nset = uniqueSubset(allset, mset);
+    
+    std::cout << '\n';
+    for (auto c : nset){
+        std::cout << c << '\n';
+    }
 }
 

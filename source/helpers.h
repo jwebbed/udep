@@ -28,5 +28,6 @@
 #include <string>
 
 std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string, std::set<std::string>> imap);
+std::set<std::string> uniqueSubset(std::set<std::string> unique_set, std::set<std::string> cmp_set);
 
 #endif

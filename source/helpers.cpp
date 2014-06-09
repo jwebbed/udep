@@ -73,6 +73,19 @@ std::set<std::string> minSubset(std::set<std::string> iset, std::map<std::string
 
 }
 
+/*
+ Returns the set of elements in the first input set that are 
+ unique to that set and not in the second set
+ */
+std::set<std::string> uniqueSubset(std::set<std::string> unique_set, std::set<std::string> cmp_set){
+    std::set<std::string> uset;
+    for (auto str : unique_set){
+        if (cmp_set.find(str) == cmp_set.end())
+            uset.insert(str);
+    }
+    return uset;
+}
+
 
 
 
