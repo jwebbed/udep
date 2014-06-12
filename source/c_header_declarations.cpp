@@ -114,6 +114,7 @@ c_set getDeclarations(std::string header){
         set.struct_set = findStructs(strprog);
         set.enum_set = findEnums(strprog);
         set.include_set = findIncludes(strprog);
+        set.extern_set = findExterns(strprog);
         
         c_set unique_set(set);
         (*total_header_map)[unique_set.name] = unique_set;

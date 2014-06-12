@@ -9,3 +9,4 @@ comp/%.o: source/%.cpp
 
 clean:
 	rm -rf comp/*
+	rm udep

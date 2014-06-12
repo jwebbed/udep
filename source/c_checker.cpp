@@ -45,8 +45,6 @@ void Program::check_c(){
         }
     }
     
-    delete total_header_map;
-    
     std::map<std::string, std::set<std::string>> fmap, emap, smap;
     for (auto node : header_map){
         fmap[node.first] = node.second.function_set;
@@ -64,9 +62,17 @@ void Program::check_c(){
     
     nset = uniqueSubset(allset, mset);
     
+    /*
+     Go through all the unused headers and check if they have
+     any external variables. If they do then check if it's used
+     in the program
+     */
+    
     std::cout << "unused headers" << '\n' << "-------------" << '\n';
     for (auto c : nset){
         std::cout << c << '\n';
     }
+    
+    delete total_header_map;
 }
 

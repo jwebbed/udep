@@ -45,6 +45,7 @@ bool isUpperCase(char c);
 bool isLowerCase(char c);
 bool isAlphanumeric(char c);
 std::string trimTrailingWhitespace(std::string str);
+std::string removeComments(std::string prog);
 
 enum comment {
     none,

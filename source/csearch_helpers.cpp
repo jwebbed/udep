@@ -63,3 +63,35 @@ string trimTrailingWhitespace(string str){
     }
     return str.substr(0, i);
 }
+
+string removeBlocks(string prog, string open, string close){
+    string str;
+    size_t index = 0;
+    size_t last = 0;
+    int len = prog.length();
+    while (index != string::npos) {
+        index = prog.find("/*", index);
+        if (index != string::npos){
+            str.append(prog.substr(last, index - last));
+            last = prog.find("*/", index);
+            if (last != string::npos && last + 1 < len){
+                last += 2;
+                index = last;
+            } else {
+                break;
+            }
+        } else {
+            str.append(prog.substr(last, len - last));
+            break;
+        }
+        
+    }
+    
+    cout << "------\n" << str << '\n';
+    return str;
+}
+
+string removeComments(string prog){
+    string noblock = removeBlocks(prog, "/*", "*/");
+    return removeBlocks(noblock, "//", "\n");
+}
