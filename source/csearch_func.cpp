@@ -61,29 +61,6 @@ set<string> _findFunctionCalls(string prog, int header){
         if (ch == '{') depth++;
         else if (ch == '}') depth--;
         
-        // Looks for comments
-        if (comment == none){
-            if (ch == '/') comment = potential;
-        } else if (comment == potential){
-            if (ch == '/') {
-                comment = line;
-                state = init;
-            }
-            else if (ch == '*') {
-                comment = block;
-                state = init;
-            } else comment = none;
-        } else if (comment == block){
-            if (ch == '*' && prog[k+1] == '/') {
-                k++;
-                comment = none;
-            }
-            continue;
-        } else if (comment == line){
-            if (ch == '\n') comment = none;
-            continue;
-        }
-        
         // Looks for functions
         if (state == init){
         init:

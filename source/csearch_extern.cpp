@@ -47,7 +47,6 @@ set<string> findExterns(string prog){
     int start = 0;
     int length = 1;
     
-    prog = removeComments(prog);
     while (index != string::npos){
     loop_top:
         // Look for external variables

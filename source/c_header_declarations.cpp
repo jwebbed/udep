@@ -109,12 +109,12 @@ c_set getDeclarations(std::string header){
     if (getHeader(&prog, header.c_str())){
         set = new c_set();
         set.name = header;
-        std::string strprog = std::string(prog);
+        std::string strprog = removeComments(std::string(prog));
         set.function_set = findFunctionDeclarations(strprog);
         set.struct_set = findStructs(strprog);
         set.enum_set = findEnums(strprog);
         set.include_set = findIncludes(strprog);
-        set.extern_set = findExterns(strprog);
+        //set.extern_set = findExterns(strprog);
         
         c_set unique_set(set);
         (*total_header_map)[unique_set.name] = unique_set;

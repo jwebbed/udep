@@ -87,7 +87,7 @@ string removeBlocks(string prog, string open, string close){
         
     }
     
-    cout << "------\n" << str << '\n';
+    //cout << "------\n" << str << '\n';
     return str;
 }
 

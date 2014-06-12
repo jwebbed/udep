@@ -24,11 +24,12 @@
 #include <iostream>
 
 #include "c_checker.h"
+#include "csearch.h"
 #include "Program.h"
 #include "helpers.h"
 
 void Program::check_c(){
-    c_set set = c_set((char*)this->prog.c_str());
+    c_set set = c_set((char*)removeComments(this->prog).c_str());
     /*
     set.printSet();
     std::cout << '\n';
