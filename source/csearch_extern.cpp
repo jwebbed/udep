@@ -39,67 +39,37 @@ enum _extern {
 
 set<string> findExterns(string prog){
     set<string> rset;
+    string buf;
     enum _extern state = init;
     size_t index = 0;
+    size_t length = prog.length();
     int start = 0;
-    int length = 1;
+    
     
     while (index != string::npos){
-    loop_top:
-        // Look for external variables
-        if (state == init){
-
-            index = prog.find("extern", index);
-            state = _extern;
-        } else if (state == _extern){
-            index += 6;
-            state = whitespace;
-        } else if (state == whitespace){
-            if (prog[index] == ' '){
-                index++;
-            } else if (prog[index] == 's' && prog[index+1] == 't' && prog[index+2] == 'r'
-                       && prog[index+3] == 'u' && prog[index+4] == 'c' && prog[index+5] == 't'){
-                index += 6;
-                //state = post_enum_struct_whitespace;
-            } else if (prog[index] == 'e' && prog[index+1] == 'n'
-                       && prog[index+2] == 'u' && prog[index+3] == 'm'){
-                index += 4;
-                //state = post_enum_struct_whitespace;
-            } else if (validInitialIndentifierChar(prog[index])){
-                state = typedec;
-            } else {
-                state = init;
-            }
-        } else if (state == typedec){
-            if (validIndentifierChar(prog[index])){
-                index++;
-            } else if (prog[index] == ' ') {
-                state = post_typedec_whitespace;
-                index++;
-            }
-        } else if (state == post_typedec_whitespace){
-            if (prog[index] == ' ' || prog[index] == '*'){
-                index++;
-            } else if (validInitialIndentifierChar(prog[index])){
-                start = ++index;
-                state = variable_dec;
-            }
-        } else if (state == variable_dec){
-            std::cout << prog[index] << '\n';
-            if (validIndentifierChar(prog[index])){
-                length++;
-                index++;
-            } else if (prog[index] == ' ' || prog[index] == '\n' || prog[index] == '\t'){
-                rset.insert(prog.substr(start, length));
-                length = 1;
-                state = init;
-                goto loop_top;
+        index = prog.find("extern", index);
+        if (index != string::npos){
+            start = index;
+            index = prog.find(";", index);
+            if (index != string::npos){
+                buf = prog.substr(start, index - start);
+                {
+                    size_t lasti = 0;
+                    size_t i = 0;
+                    while (i != string::npos){
+                        i = buf.find(" ", i + 1);
+                        if (i != string::npos)
+                            lasti = i;
+                        else
+                            break;
+                    }
+                    cout << buf.substr(lasti, lasti - i) << "\n";
+                    rset.insert(buf.substr(lasti, lasti - i));
+                }
             }
         }
-    }
-    
     
 
-    
+    }
     return rset;
 }
