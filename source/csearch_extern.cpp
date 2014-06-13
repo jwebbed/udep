@@ -40,10 +40,7 @@ enum _extern {
 set<string> findExterns(string prog){
     set<string> rset;
     enum _extern state = init;
-    enum comment comment = none;
     size_t index = 0;
-    size_t blocki = 0;
-    size_t linei = 0;
     int start = 0;
     int length = 1;
     
