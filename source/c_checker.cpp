@@ -70,6 +70,15 @@ void Program::check_c(){
      in the program
      */
     
+    for (std::string header : nset){
+        for (std::string ext : exmap[header]){
+            if (this->prog.find(ext) != std::string::npos){
+                nset.erase(header);
+                break;
+            }
+        }
+    }
+    
     std::cout << "unused headers" << '\n' << "-------------" << '\n';
     for (auto c : nset){
         std::cout << c << '\n';
