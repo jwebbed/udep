@@ -27,20 +27,9 @@
 
 using namespace std;
 
-enum _extern {
-    init,
-    _extern,
-    whitespace,
-    post_enum_struct_whitespace,
-    typedec,
-    post_typedec_whitespace,
-    variable_dec
-};
-
 set<string> findExterns(string prog){
     set<string> rset;
     string buf;
-    enum _extern state = init;
     size_t index = 0;
     size_t length = prog.length();
     int start = 0;
@@ -63,8 +52,16 @@ set<string> findExterns(string prog){
                         else
                             break;
                     }
-                    cout << buf.substr(lasti, lasti - i) << "\n";
-                    rset.insert(buf.substr(lasti, lasti - i));
+                    string name = buf.substr(lasti + 1, lasti);
+                    if (name.find(")") == string::npos && name.find("(") == string::npos){
+                        if (name[0] == '*')
+                            name = name.substr(1, name.length() - 1);
+                    
+                        if (name.substr(name.length() - 2, 2) == "[]")
+                            name = name.substr(0, name.length() - 2);
+                        
+                        rset.insert(name);
+                    }
                 }
             }
         }
