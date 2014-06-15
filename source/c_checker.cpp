@@ -65,12 +65,6 @@ void Program::check_c(){
     
     nset = uniqueSubset(allset, mset);
     
-    /*
-     Go through all the unused headers and check if they have
-     any external variables. If they do then check if it's used
-     in the program
-     */
-    
     for (std::string header : nset){
         for (std::string ext : exmap[header]){
             if (this->prog.find(ext) != std::string::npos){
