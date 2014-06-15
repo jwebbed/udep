@@ -38,6 +38,7 @@ public:
     void checkProg();
 private:
     language_t lang;
+    bool comments;
     std::string prog;
     void check_c();
     
