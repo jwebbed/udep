@@ -26,10 +26,6 @@
 #include "c_set.h"
 #include "c_map.h"
 
-enum _extern {
-    
-};
-
 c_set getDeclarations(std::string header);
 extern c_map_t* total_header_map;
 

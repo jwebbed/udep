@@ -31,10 +31,6 @@
 void Program::check_c(){
     this->prog = removeComments(this->prog);
     c_set set = c_set((char*)this->prog.c_str());
-    /*
-    set.printSet();
-    std::cout << '\n';
-     */
     
     std::set<std::string> allset, usedset, mset, fset, eset, sset, nset;
     std::map<std::string, c_set> header_map;
