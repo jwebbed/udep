@@ -40,7 +40,7 @@ void Program::setLanguage(language_t lang){
 void Program::checkProg(){
     switch (this->lang){
         case c:
-            this->check_c();
+            check_c(this->prog);
             break;
         case python:
             std::cout << "Python is currently NYI";

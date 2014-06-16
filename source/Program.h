@@ -40,10 +40,9 @@ private:
     language_t lang;
     bool comments;
     std::string prog;
-    void check_c();
-    
 };
 
+void check_c(std::string prog);
 
 
 

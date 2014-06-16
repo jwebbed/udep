@@ -28,13 +28,10 @@
 #include "Program.h"
 #include "helpers.h"
 
-void Program::check_c(){
-    this->prog = removeComments(this->prog);
-    c_set set = c_set((char*)this->prog.c_str());
-    /*
-    set.printSet();
-    std::cout << '\n';
-     */
+void check_c(std::string prog){
+    prog = removeComments(prog);
+    c_set set = c_set((char*)prog.c_str());
+
     
     std::set<std::string> allset, usedset, mset, fset, eset, sset, nset;
     std::map<std::string, c_set> header_map;
@@ -67,7 +64,7 @@ void Program::check_c(){
     
     for (std::string header : nset){
         for (std::string ext : exmap[header]){
-            if (this->prog.find(ext) != std::string::npos){
+            if (prog.find(ext) != std::string::npos){
                 nset.erase(header);
                 break;
             }
