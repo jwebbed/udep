@@ -51,7 +51,6 @@ set<string> _findFunctionCalls(string prog, int header){
     string buf;
     
     enum func state = init;
-    enum comment comment = none;
     int depth = 0;
     
     size_t len = prog.length();

@@ -21,7 +21,6 @@
  */
 
 #include <string>
-#include <iostream>
 
 #include "csearch.h"
 
@@ -31,14 +30,12 @@ set<string> findExterns(string prog){
     set<string> rset;
     string buf;
     size_t index = 0;
-    size_t length = prog.length();
     int start = 0;
     
     
     while (index != string::npos){
         index = prog.find("extern", index);
         if (index != string::npos){
-            start = index;
             index = prog.find(";", index);
             if (index != string::npos){
                 buf = prog.substr(start, index - start);

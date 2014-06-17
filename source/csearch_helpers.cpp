@@ -68,7 +68,7 @@ string removeBlocks(string prog, string open, string close){
     string str;
     size_t index = 0;
     size_t last = 0;
-    int len = prog.length();
+    size_t len = prog.length();
     while (index != string::npos) {
         index = prog.find("/*", index);
         if (index != string::npos){
