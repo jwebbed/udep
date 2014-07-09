@@ -1,3 +1,7 @@
+.DS_STORE
+/comp
+udep
+
 # Object files
 *.o
 *.ko
